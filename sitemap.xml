@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://yoursite.com/blog/2013/02/24/hello-octopress/</loc>
+        <lastmod>2013-03-11T13:16:33+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/about/</loc>
+        <lastmod>2013-03-10T15:21:58+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/archives/</loc>
+        <lastmod>2013-03-11T13:16:33+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/</loc>
+        <lastmod>2013-03-11T13:16:33+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/robots.txt</loc>
+        <lastmod>2013-02-21T14:54:34+08:00</lastmod>
+    </url>
+</urlset>

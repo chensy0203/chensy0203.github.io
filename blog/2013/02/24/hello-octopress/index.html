@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>用octopress写博客 - chensy0203</title>
+  <meta name="author" content="chensy0203">
+
+  
+  <meta name="description" content="写在前面 一直想用blog记录点什么东西，但原有基于数据库的blog，总感觉有所欠缺。直到遇见了cotopress，才发现这应该是我想要的了。它是用文件存储数据，以静态方式发布，可以直接挂在github等地方，而且是免费的。 这是第一篇博客，结合网上的教程与自己的搭建过程，做了下记录。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/2013/02/24/hello-octopress/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="chensy0203" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">chensy0203</a></h1>
+  
+    <h2>一只攻城狮的blog</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">首页</a></li>
+  <li><a href="/blog/archives">存档</a></li>
+  <li><a href="/about">关于</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">用octopress写博客</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-24T15:45:00+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>写在前面</h2>
+
+<p>一直想用blog记录点什么东西，但原有基于数据库的blog，总感觉有所欠缺。直到遇见了cotopress，才发现这应该是我想要的了。它是用文件存储数据，以静态方式发布，可以直接挂在github等地方，而且是免费的。</p>
+
+<p>这是第一篇博客，结合网上的教程与自己的搭建过程，做了下记录。以后如果遇到新的问题，也会不断在这里更新的。 ^_^</p>
+
+<!--more-->
+
+
+<hr />
+
+<h2>1.安装 Octopress</h2>
+
+<p>我的环境是：windows7</p>
+
+<h3>1.1安装 Git</h3>
+
+<p>去下载<a href="http://code.google.com/p/msysgit/downloads/list">Git for Windows</a></p>
+
+<p>如何安装，可以参考下这里<a href="http://www.starming.com/index.php?action=plugin&amp;v=wave&amp;tpl=union&amp;ac=viewgrouppost&amp;gid=32767&amp;tid=1000002148">在windows安装配置Git开发环境</a></p>
+
+<p>安装完后，用Git clone 一份Octopress到本地，以下是命令</p>
+
+<figure class='code'><figcaption><span>用Git clone 一份Octopress </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>1.2安装Ruby以及DevKit</h3>
+
+<p>去下载并安装<a href="http://rubyinstaller.org/downloads/">Ruby for windows</a></p>
+
+<p>同时还要下载安装<a href="http://rubyinstaller.org/downloads/">DEVELOPMENT KIT</a>。安装完后，还需要配置，可以参考<a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit">wiki</a></p>
+
+<h3>1.3安装octopress相关的依赖</h3>
+
+<figure class='code'><figcaption><span>安装Octopress依赖的组件 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>bundle install    #要成功安装了DevKit后才能顺利安装。且注意是：bundle，而不是bundler
+</span><span class='line'>rake install  #安装默认的Octopress主题。新建了三个文件夹：public sass source</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>rake install之后发生的事情 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>## Copying classic theme into ./source and ./sass
+</span><span class='line'>mkdir -p source
+</span><span class='line'>cp -r .themes/classic/source/. source
+</span><span class='line'>mkdir -p sass
+</span><span class='line'>cp -r .themes/classic/sass/. sass
+</span><span class='line'>mkdir -p source/_posts
+</span><span class='line'>mkdir -p public</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>2.部署到Github Pages</h2>
+
+<h3>2.1注册<a href="https://github.com/">github</a></h3>
+
+<p>Github Pages 可以提供一个域名为<code>http://username.github.com</code>的博客。</p>
+
+<p>所以用户名就取好点了 ^_^</p>
+
+<h3>2.2配置github</h3>
+
+<p>首先在github新建一个名为<code>username.github.com</code>的<a href="https://github.com/new">Repository</a>，然后就可以把Octopress博客部署到该域名上了。(该username必须与你在github上的用户名一致)</p>
+
+<p>例如我的 GitHub 帐号是 chensy0203 就将 Repository 命名为 <code>chensy0203.github.com</code>， 完成后会得到一组 GitHub Pages URL <code>http://chensy0203.github.com</code></p>
+
+<h3>2.3设定 GitHub Pages</h3>
+
+<figure class='code'><figcaption><span>设定GitHubPages </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p> 以上执行后会要求输入repository的URL：<code>git@github.com:username/yourname.github.com.git</code></p>
+
+<figure class='code'><figcaption><span>发布blog </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate        #生成静态页面
+</span><span class='line'>rake deploy           #部署到github</span></code></pre></td></tr></table></div></figure>
+
+
+<p>等待几分钟后，你就可以到 <code>http://username.github.com</code> 上看到你的博客了.</p>
+
+<h3>2.4日后维护</h3>
+
+<h4>2.4.1保存源码（将source加入git）</h4>
+
+<p>因为发布的只是生成的静态页面，需要在项目里建立source分支用于保存整个项目源代码（配置、markdown文件等）。</p>
+
+<figure class='code'><figcaption><span>建立source分支 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m 'initial source commit'
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>2.4.2更新 Octopress</h4>
+
+<p>日后有 Octopress 新版本发布，使用以下指令升级。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add octopress git://github.com/imathis/octopress.git
+</span><span class='line'>git pull octopress master     # Get the latest Octopress
+</span><span class='line'>bundle install                # Keep gems updated
+</span><span class='line'>rake update_source            # update the template's source
+</span><span class='line'>rake update_style             # update the template's style</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>3.开始写第一篇博文</h2>
+
+<figure class='code'><figcaption><span>新增博文 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["title"]       #生成一个markdown文件，名字类似为：2013-02-24-title.mrakdown</span></code></pre></td></tr></table></div></figure>
+
+
+<p>运行后会通过title生成相关文件。然后就可以用markdown去写博文了。</p>
+
+<p>PS:windows下建议安装<a href="http://markdownpad.com/">MarkdownPad</a>软件去写博文，挺不错的</p>
+
+<p>写完后，就可以用以下的命令，在本地预览，没问题了就可以发布并部署到github上了</p>
+
+<figure class='code'><figcaption><span>常用命令 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview         #启动服务器并监控变动，通过http://localhost:4000预览
+</span><span class='line'>rake generate         #发布文件到public目录
+</span><span class='line'>rake deploy               #部署到github</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这时，我们会发现，在首页上，整篇博文都显示出来了。但如果只想要显示摘要怎么办？</p>
+
+<p>1.在文中加入<code>&lt;!--more--&gt;</code>来控制摘要截取位置</p>
+
+<p>2.修改<code>_config.yml</code>里的<code>excerpt_link</code>的值，可以设置链接的显示文字（默认是Read on）</p>
+
+<hr />
+
+<h2>4.个性化配置</h2>
+
+<h3>4.1修改Header, Navigation和Footer</h3>
+
+<p>可以直接编辑html文件，分别对应以下三个文件</p>
+
+<p><code>source\_includes\custom\header.html</code></p>
+
+<p><code>source\_includes\custom\navigation.html</code></p>
+
+<p><code>source\_includes\custom\footer.html</code></p>
+
+<h3>4.2添加新页面</h3>
+
+<figure class='code'><figcaption><span>新增页面命令 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_page[about]     #在source下新建about目录，并在里面添加index.markdown文件</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后编辑导航条<code>source/_includes/custom/navigation.html</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ul class="main-navigation">
+</span><span class='line'>  &lt;li>&lt;a href="/">首页&lt;/a>&lt;/li>
+</span><span class='line'>  &lt;li>&lt;a href="/blog/archives">存档&lt;/a>&lt;/li>
+</span><span class='line'>  &lt;li>&lt;a href="/about">关于&lt;/a>&lt;/li>
+</span><span class='line'>&lt;/ul></span></code></pre></td></tr></table></div></figure>
+
+
+<h3>4.3修改侧边栏</h3>
+
+<h4>以添加新浪新浪微博秀为例</h4>
+
+<p>在<code>_config.yml</code>文件中将<code>default_asides</code>处代码改为如下，即去除不要的侧边栏，并加入微博侧边栏。</p>
+
+<figure class='code'><figcaption><span>修改侧边栏 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>default_asides: [asides/recent_posts.html, asides/github.html, custom/asides/weibo.html]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>到<a href="http://app.weibo.com/tool/weiboshow">http://app.weibo.com/tool/weiboshow</a>获取自己微博秀的代码。
+在<code>source/_includes/custom/asides</code>文件夹下新建<code>weibo.html</code>文件并编辑如下,将获取的微博秀代码插入到相应位置：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;section>
+</span><span class='line'>    &lt;h1>新浪微博&lt;/h1>
+</span><span class='line'>    &lt;ul id="weibo">
+</span><span class='line'>    &lt;li>
+</span><span class='line'>
+</span><span class='line'>    &lt;!-- 在此插入获得的微博秀代码 -->
+</span><span class='line'>
+</span><span class='line'>      &lt;/li>
+</span><span class='line'>    &lt;/ul>
+</span><span class='line'>&lt;/section></span></code></pre></td></tr></table></div></figure>
+
+
+<h3>4.4 分享到和评论功能</h3>
+
+<p>编辑<code>/source/_includes/post/sharing.html</code>,增加如下代码：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//下面的大括号与百分号间无空格，如果复制，请去掉 
+</span><span class='line'>{ % include custom/sharing.html % }</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在<code>source/_includes/custom</code>下新建<code>sharing.html</code>文件</p>
+
+<p>到<a href="http://www.jiathis.com/">http://www.jiathis.com/</a>获取喜欢按钮样式的分享代码，加入到sharing.html中，即可增加分享到按钮功能。</p>
+
+<p>到<a href="http://www.uyan.cc/">http://www.uyan.cc/</a>获取评论功能的代码，加入到sharing.html中，即可增加评论功能。</p>
+
+<h3>4.5 Octopress代码高亮</h3>
+
+<figure class='code'><figcaption><span>最简单的方式</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//下面的大括号与百分号间无空格，如果复制，请去掉  
+</span><span class='line'>{ % codeblock  % }
+</span><span class='line'>//你的代码
+</span><span class='line'>{ % endcodeblock  % }</span></code></pre></td></tr></table></div></figure>
+
+
+<p>对于前端的源码还可以使用 jsFiddle插件，这个迟点有需求再研究</p>
+
+<hr />
+
+<h2>5.问题收集（不断更新中）</h2>
+
+<h3>5.1执行git命令时，操作失败：Permission denied(publickey)</h3>
+
+<pre><code>原因：没有设置好ssh keys
+解决：参考[官方教程](https://help.github.com/articles/generating-ssh-keys)
+</code></pre>
+
+<h3>5.2<strong>不能进行deploy(Github)</strong></h3>
+
+<pre><code>问题：有次发现rake deploy不能发布，但是预览正常。检查github上source分支代码已更新，但master仍为老代码。
+原因：发现是因为代码是新从github下clone下来的，未进行初始化deploy。
+解决：需要执行$ rake setup_github_pages进行初始化。
+注意：rake操作应该在source分支下进行，若是刚从github里clone下来的，请先执行$ git checkout source。
+</code></pre>
+
+<h3>5.3<strong>修改的样式preview时不生效</strong></h3>
+
+<pre><code>问题：预览时发现之前设置成功的自定义样式不生效，变回默认样式。
+解决：$ rake generate即可，会重新生成css。
+</code></pre>
+
+<h3>5.4<strong>无法update octopress</strong></h3>
+
+<pre><code>每过一段时间，可能需要更新一下Octopress版本，
+问题：执行$ git pull octopress master时报错：fatal: 'octopress' does not appear to be a git repository
+原因：没有相应远程分支（第一次生成博客的项目中才有？）。打开.git/config查看，应该不包含[remote "octopress"]块。
+解决：手动添加，或者在命令行执行：$ git remote add octopress https://github.com/imathis/octopress.git
+</code></pre>
+
+<hr />
+
+<h3>6.参考</h3>
+
+<ul>
+<li><a href="http://octopress.org/docs/">Octopress官方文档</a></li>
+<li><a href="http://fancyoung.com/blog/octopress-study/" title="技术博客利器——Octopress">技术博客利器——Octopress</a></li>
+<li><a href="http://caok1231.com/blog/2012/06/24/install-octopress-to-write-blog/">用octopress来写博客</a></li>
+<li><a href="http://yanping.me/cn/blog/2012/01/07/theming-and-customization/">为Octopress修改主题和自定义样式</a></li>
+<li><a href="http://programus.github.com/blog/2012/03/04/share-weibo-button/">为Octopress追加[分享到微博]按钮</a></li>
+<li><a href="https://github.com/tokkonopapa/octopress-tagcloud">标签云</a></li>
+<li><a href="http://blog.visioncan.com/2011/sass-scss-your-css/">使用scss來加速寫css吧</a></li>
+<li><a href="http://easypi.github.com/blog/2013/01/05/using-octopress-to-setup-blog-on-github/">利用Octopress在github Pages上搭建个人博客</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">chensy0203</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-24T15:45:00+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+	<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<span class="jiathis_txt">分享到：</span>
+	<a class="jiathis_button_tools_1"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a class="jiathis_button_tools_4"></a>
+	<a href="http://www.jiathis.com/share?uid=1739709" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1359700535564387" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1739709" async=""></script>
+<!-- UY END -->
+</div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>最近发表</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/24/hello-octopress/">用octopress写博客</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+    <h1>新浪微博</h1>
+    <ul id="weibo">
+    <li>
+<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1817960310&verifier=2b0f09b7&dpc=1"></iframe>
+    </ul>
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - chensy0203 -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
