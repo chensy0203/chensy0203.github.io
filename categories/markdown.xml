@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>chensy's blog (markdown)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Mon, 01 Jul 2013 14:20:06 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#overview"&gt;概述&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#philosophy"&gt;宗旨&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#html"&gt;兼容 HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#autoescape"&gt;特殊字符自动转换&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#block"&gt;区块元素&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#p"&gt;段落和换行&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#header"&gt;标题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#blockquote"&gt;区块引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#list"&gt;列表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#precode"&gt;代码区块&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#hr"&gt;分隔线&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#span"&gt;区段元素&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#link"&gt;链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#em"&gt;强调&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#code"&gt;代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#img"&gt;图片&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#misc"&gt;其它&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#backslash"&gt;反斜杠&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#autolink"&gt;自动链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#acknowledgement"&gt;感谢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#editor"&gt;Markdown 免费编辑器&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/hello-markdown.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>markdown</category><category>hello</category><guid>http://chensy0203.github.com/posts/hello-markdown.html</guid><pubDate>Fri, 28 Jun 2013 11:27:46 GMT</pubDate></item></channel></rss>

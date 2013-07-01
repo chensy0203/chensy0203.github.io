@@ -1,0 +1,9 @@
+.. tags: hello
+.. link: 
+.. slug: hello-world
+.. date: 2013/06/22 16:06:37
+.. title: Hello World
+.. comment: False
+.. description: 安装完nikola后的hello world
+
+Hello World , chensy!

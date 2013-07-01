@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="zh_cn">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="chensy">
+    <title>用octopress写博客 | chensy's blog</title>
+    
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/myrst.css" rel="stylesheet" type="text/css">
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+            <link rel="icon" href="../16x16.png" sizes="16x16">
+
+    
+
+
+
+    
+</head>
+<body>
+<!-- Menubar -->
+<div class="header">
+    <div class="header_box">
+            <h1 class="logo" id="logo"><a href="../">chensy's blog</a>
+            </h1>
+            <ul class="main_nav" id="mainNav">
+                
+                <li><a href="../index.html">首页</a>
+                </li><li><a href="../archive.html">存档</a>
+                </li><li><a href="../stories/about.html">关于</a>
+                </li><li class="rss"><a href="../rss.xml">RSS</a>
+
+            </li></ul>
+ <!--        
+            
+            
+            
+-->
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="content clearfix">
+    <!--Body content-->
+    <div class="con_left" id="conLeft">
+    
+    <div class="article_box">
+    	<div class="article_title">
+    		
+    <h3>用octopress写博客</h3>
+
+    	</div>
+	    <div class="entry ">                    
+		    	<!--
+.. title: 用octopress写博客
+.. slug: hello-octopress
+.. date: 2013/02/24 15:45:00
+.. tags: octopress, hello
+.. comment: True
+.. link:
+.. description:
+-->
+
+<h3>写在前面</h3>
+<p>一直想用blog记录点什么东西，但用网上的blog服务，感觉不是很灵活。自己也用过wordpress，但它是基于数据库的，总感觉有所欠缺。直到遇见了cotopress，才发现这应该是我想要的了。它是用文件存储数据，以静态方式发布，可以直接挂在github等地方，而且是免费的。</p>
+<p>这是第一篇博客，结合网上的教程与自己的搭建过程，做了下记录。以后如果遇到新的问题，也会不断在这里更新的。 ^_^</p>
+<!-- TEASER_END -->
+
+<hr>
+<h3>1.安装 Octopress</h3>
+<p>我的环境是：windows7</p>
+<h4>1.1安装 Git</h4>
+<p>去下载<a href="http://code.google.com/p/msysgit/downloads/list">Git for Windows</a></p>
+<p>如何安装，可以参考下这里<a href="http://www.starming.com/index.php?action=plugin&amp;v=wave&amp;tpl=union&amp;ac=viewgrouppost&amp;gid=32767&amp;tid=1000002148">在windows安装配置Git开发环境</a></p>
+<p>安装完后，用Git clone 一份Octopress到本地，以下是命令</p>
+<div class="code"><pre>    <span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="o">:</span><span class="c1">//github.com/imathis/octopress.git octopress</span>
+</pre></div>
+
+
+<h4>1.2安装Ruby以及DevKit</h4>
+<p>去下载并安装<a href="http://rubyinstaller.org/downloads/">Ruby for windows</a></p>
+<p>同时还要下载安装<a href="http://rubyinstaller.org/downloads/">DEVELOPMENT KIT</a>。安装完后，还需要配置，可以参考<a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit">wiki</a></p>
+<h4>1.3安装octopress相关的依赖</h4>
+<div class="code"><pre><span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+<span class="n">bundle</span> <span class="n">install</span>  <span class="err">#要成功安装了</span><span class="n">DevKit</span><span class="err">后才能顺利安装。且注意是：</span><span class="n">bundle</span><span class="err">，而不是</span><span class="n">bundler</span>
+<span class="n">rake</span> <span class="n">install</span>    <span class="err">#安装默认的</span><span class="n">Octopress</span><span class="err">主题。新建了三个文件夹：</span><span class="n">public</span> <span class="n">sass</span> <span class="n">source</span>
+</pre></div>
+
+
+<p>rake install之后发生的事情
+    ## Copying classic theme into ./source and ./sass
+    mkdir -p source
+    cp -r .themes/classic/source/. source
+    mkdir -p sass
+    cp -r .themes/classic/sass/. sass
+    mkdir -p source/_posts
+    mkdir -p public</p>
+<hr>
+<h3>2.部署到Github Pages</h3>
+<h4>2.1注册<a href="https://github.com/">github</a></h4>
+<p>Github Pages 可以提供一个域名为<code>http://username.github.com</code>的博客。</p>
+<p>所以用户名就取好点了 ^_^</p>
+<h4>2.2配置github</h4>
+<p>首先在github新建一个名为<code>username.github.com</code>的<a href="https://github.com/new">Repository</a>，然后就可以把Octopress博客部署到该域名上了。(该username必须与你在github上的用户名一致)</p>
+<p>例如我的 GitHub 帐号是 chensy0203 就将 Repository 命名为 <code>chensy0203.github.com</code>， 完成后会得到一组 GitHub Pages URL <code>http://chensy0203.github.com</code></p>
+<h4>2.3设定 GitHub Pages</h4>
+<div class="code"><pre><span class="n">rake</span> <span class="n">setup_github_pages</span>
+</pre></div>
+
+
+<p>以上执行后会要求输入repository的URL：<code>git@github.com:username/yourname.github.com.git</code></p>
+<p>发布blog
+    rake generate       #生成静态页面
+    rake deploy         #部署到github</p>
+<p>等待几分钟后，你就可以到 <code>http://username.github.com</code> 上看到你的博客了.</p>
+<h4>2.4日后维护</h4>
+<h5>2.4.1保存源码（将source加入git）</h5>
+<p>因为发布的只是生成的静态页面，需要在项目里建立source分支用于保存整个项目源代码（配置、markdown文件等）。</p>
+<p>建立source分支
+    git add .
+    git commit -m 'initial source commit'
+    git push origin source</p>
+<h5>2.4.2更新 Octopress</h5>
+<p>日后有 Octopress 新版本发布，使用以下指令升级。</p>
+<div class="code"><pre><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">octopress</span> <span class="n">git</span><span class="o">:</span><span class="c1">//github.com/imathis/octopress.git</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">octopress</span> <span class="n">master</span>     <span class="err">#</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">Octopress</span>
+<span class="n">bundle</span> <span class="n">install</span>                <span class="err">#</span> <span class="n">Keep</span> <span class="n">gems</span> <span class="n">updated</span>
+<span class="n">rake</span> <span class="n">update_source</span>            <span class="err">#</span> <span class="n">update</span> <span class="n">the</span> <span class="n">template</span><span class="err">'</span><span class="n">s</span> <span class="n">source</span>
+<span class="n">rake</span> <span class="n">update_style</span>             <span class="err">#</span> <span class="n">update</span> <span class="n">the</span> <span class="n">template</span><span class="err">'</span><span class="n">s</span> <span class="n">style</span>
+</pre></div>
+
+
+<hr>
+<h3>3.开始写第一篇博文</h3>
+<div class="code"><pre><span class="n">rake</span> <span class="n">new_post</span><span class="p">[</span><span class="s">"title"</span><span class="p">]</span>      <span class="err">#生成一个</span><span class="n">markdown</span><span class="err">文件，名字类似为：</span><span class="mi">2013</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="n">title</span><span class="p">.</span><span class="n">mrakdown</span>
+</pre></div>
+
+
+<p>运行后会通过title生成相关文件。然后就可以用markdown去写博文了。</p>
+<p>PS:windows下建议安装<a href="http://markdownpad.com/">MarkdownPad</a>软件去写博文，挺不错的</p>
+<p>写完后，就可以用以下的命令，在本地预览，没问题了就可以发布并部署到github上了</p>
+<div class="code"><pre><span class="n">rake</span> <span class="n">preview</span>            <span class="err">#启动服务器并监控变动，通过</span><span class="n">http</span><span class="o">:</span><span class="c1">//localhost:4000预览</span>
+<span class="n">rake</span> <span class="n">generate</span>           <span class="err">#发布文件到</span><span class="n">public</span><span class="err">目录</span>
+<span class="n">rake</span> <span class="n">deploy</span>             <span class="err">#部署到</span><span class="n">github</span>
+</pre></div>
+
+
+<p>这时，我们会发现，在首页上，整篇博文都显示出来了。但如果只想要显示摘要怎么办？</p>
+<p>1.在文中加入<code>&lt;!--more--&gt;</code>来控制摘要截取位置</p>
+<p>2.修改<code>_config.yml</code>里的<code>excerpt_link</code>的值，可以设置链接的显示文字（默认是Read on）</p>
+<hr>
+<h3>4.个性化配置</h3>
+<h4>4.1修改Header, Navigation和Footer</h4>
+<p>可以直接编辑html文件，分别对应以下三个文件</p>
+<p><code>source\_includes\custom\header.html</code></p>
+<p><code>source\_includes\custom\navigation.html</code></p>
+<p><code>source\_includes\custom\footer.html</code></p>
+<h4>4.2添加新页面</h4>
+<div class="code"><pre><span class="n">rake</span> <span class="n">new_page</span><span class="p">[</span><span class="n">about</span><span class="p">]</span>        <span class="err">#在</span><span class="n">source</span><span class="err">下新建</span><span class="n">about</span><span class="err">目录，并在里面添加</span><span class="n">index</span><span class="p">.</span><span class="n">markdown</span><span class="err">文件</span>
+</pre></div>
+
+
+<p>然后编辑导航条<code>source/_includes/custom/navigation.html</code></p>
+<ul class="main-navigation">
+  <li><a href="%7B%7B%20root_url%20%7D%7D/">首页</a></li>
+  <li><a href="%7B%7B%20root_url%20%7D%7D/blog/archives">存档</a></li>
+  <li><a href="%7B%7B%20root_url%20%7D%7D/about">关于</a></li>
+</ul>
+
+<h4>4.3修改侧边栏</h4>
+<h5>以添加新浪新浪微博秀为例</h5>
+<p>在<code>_config.yml</code>文件中将<code>default_asides</code>处代码改为如下，即去除不要的侧边栏，并加入微博侧边栏。
+    default_asides: [asides/recent_posts.html, asides/github.html, custom/asides/weibo.html]</p>
+<p>到<a href="http://app.weibo.com/tool/weiboshow">http://app.weibo.com/tool/weiboshow</a>获取自己微博秀的代码。
+在<code>source/_includes/custom/asides</code>文件夹下新建<code>weibo.html</code>文件并编辑如下,将获取的微博秀代码插入到相应位置： 
+    <section>
+        <h2>新浪微博</h2>
+        <ul id="weibo">
+        <li></ul></section></p>
+<div class="code"><pre>    <span class="c">&lt;!-- 在此插入获得的微博秀代码 --&gt;</span>
+
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre></div>
+
+
+<h4>4.4 分享到和评论功能</h4>
+<p>编辑<code>/source/_includes/post/sharing.html</code>,增加如下代码：</p>
+<div class="code"><pre><span class="c1">//下面的大括号与百分号间无空格，如果复制，请去掉 </span>
+<span class="p">{</span> <span class="o">%</span> <span class="k">include</span> <span class="n">custom</span><span class="o">/</span><span class="n">sharing</span><span class="p">.</span><span class="n">html</span> <span class="o">%</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>在<code>source/_includes/custom</code>下新建<code>sharing.html</code>文件</p>
+<p>到<a href="http://www.jiathis.com/">http://www.jiathis.com/</a>获取喜欢按钮样式的分享代码，加入到sharing.html中，即可增加分享到按钮功能。</p>
+<p>到<a href="http://www.uyan.cc/">http://www.uyan.cc/</a>获取评论功能的代码，加入到sharing.html中，即可增加评论功能。</p>
+<h4>4.5 Octopress代码高亮</h4>
+<p>最简单的方式
+    //下面的大括号与百分号间无空格，如果复制，请去掉<br>
+    { % codeblock  % }
+    //你的代码
+    { % endcodeblock  % }</p>
+<p>对于前端的源码还可以使用 jsFiddle插件，这个迟点有需求再研究</p>
+<hr>
+<h3>5.问题收集（不断更新中）</h3>
+<h4>5.1执行git命令时，操作失败：Permission denied(publickey)</h4>
+<div class="code"><pre><span class="err">原因：没有设置好</span><span class="n">ssh</span> <span class="n">keys</span>
+<span class="err">解决：参考</span><span class="p">[</span><span class="err">官方教程</span><span class="p">](</span><span class="n">https</span><span class="o">:</span><span class="c1">//help.github.com/articles/generating-ssh-keys)</span>
+</pre></div>
+
+
+<h4>5.2<strong>不能进行deploy(Github)</strong></h4>
+<div class="code"><pre><span class="err">问题：有次发现</span><span class="n">rake</span> <span class="n">deploy</span><span class="err">不能发布，但是预览正常。检查</span><span class="n">github</span><span class="err">上</span><span class="n">source</span><span class="err">分支代码已更新，但</span><span class="n">master</span><span class="err">仍为老代码。</span>
+<span class="err">原因：发现是因为代码是新从</span><span class="n">github</span><span class="err">下</span><span class="n">clone</span><span class="err">下来的，未进行初始化</span><span class="n">deploy</span><span class="err">。</span>
+<span class="err">解决：需要执行</span> <span class="n">rake</span> <span class="n">setup_github_pages</span><span class="err">进行初始化。</span>
+<span class="err">注意：</span><span class="n">rake</span><span class="err">操作应该在</span><span class="n">source</span><span class="err">分支下进行，若是刚从</span><span class="n">github</span><span class="err">里</span><span class="n">clone</span><span class="err">下来的，请先执行$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">source</span><span class="err">。</span>
+</pre></div>
+
+
+<p>问题实录：当我在本地对octopress进行了一系统的配置并且基本写完了第一篇博客后，想更新到github，突然发现<code>rake deploy</code>失败。
+    ## Deploying website via Rsync
+    FAILED
+之后试过重新<code>rake setup_github_pages</code>，但一样失败
+    Enter the read/write url for your repository
+    (For example, 'git@github.com:your_username/your_username.github.com)
+    Repository url: git@github.com:chensy0203/chensy0203.github.com
+    rake aborted!
+    No such file or directory - git remote -v</p>
+<div class="code"><pre><span class="n">Tasks</span><span class="o">:</span> <span class="n">TOP</span> <span class="o">=&gt;</span> <span class="n">setup_github_pages</span>
+<span class="o">(</span><span class="n">See</span> <span class="n">full</span> <span class="nf">trace</span> <span class="n">by</span> <span class="n">running</span> <span class="n">task</span> <span class="k">with</span> <span class="o">--</span><span class="nf">trace</span><span class="o">)</span>
+</pre></div>
+
+
+<p>之后，在网上找了很多资料，进行过各种尝试，但依然不行。
+最后学习了下git，用最原始的方法解决了。首先要明白，用rake deploy命令，只是把public文件夹下的静态文件更新到github上面。所以明白了这一点就好做了。
+我在github上建立了一个空的仓库chensy0203.github.com，然后clone下来，之后，把clone的文件夹下的.git文件夹剪切到了public文件夹下
+git clone git@github.com:chensy0203/chensy0203.github.com.git
+git add .
+git commit -m 'first commit'
+git push origin master</p>
+<h4>5.3<strong>修改的样式preview时不生效</strong></h4>
+<div class="code"><pre><span class="err">问题：预览时发现之前设置成功的自定义样式不生效，变回默认样式。</span>
+<span class="err">解决：$</span> <span class="n">rake</span> <span class="n">generate</span><span class="err">即可，会重新生成</span><span class="n">css</span><span class="err">。</span>
+</pre></div>
+
+
+<h4>5.4<strong>无法update octopress</strong></h4>
+<div class="code"><pre><span class="err">每过一段时间，可能需要更新一下</span><span class="n">Octopress</span><span class="err">版本，</span>
+<span class="err">问题：执行$</span> <span class="n">git</span> <span class="n">pull</span> <span class="n">octopress</span> <span class="n">master</span><span class="err">时报错：</span><span class="n">fatal</span><span class="o">:</span> <span class="err">'</span><span class="n">octopress</span><span class="err">'</span> <span class="n">does</span> <span class="n">not</span> <span class="n">appear</span> <span class="n">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">git</span> <span class="n">repository</span>
+<span class="err">原因：没有相应远程分支（第一次生成博客的项目中才有？）。打开</span><span class="p">.</span><span class="n">git</span><span class="o">/</span><span class="n">config</span><span class="err">查看，应该不包含</span><span class="p">[</span><span class="n">remote</span> <span class="s">"octopress"</span><span class="p">]</span><span class="err">块。</span>
+<span class="err">解决：手动添加，或者在命令行执行：$</span> <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">octopress</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/imathis/octopress.git</span>
+</pre></div>
+
+
+<h4>5.5rake preview失败</h4>
+<div class="code"><pre><span class="n">Starting</span> <span class="n">to</span> <span class="n">watch</span> <span class="n">source</span> <span class="n">with</span> <span class="n">Jekyll</span> <span class="n">and</span> <span class="n">Compass</span><span class="p">.</span> <span class="n">Starting</span> <span class="n">Rack</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">4000</span>
+<span class="nl">E:</span><span class="o">/</span><span class="n">Ruby193</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ruby</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">1.9.1</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">bundler</span><span class="o">-</span><span class="mf">1.3.2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">bundler</span><span class="o">/</span><span class="n">runtime</span><span class="p">.</span><span class="n">rb</span><span class="o">:</span><span class="mi">33</span><span class="o">:</span><span class="n">in</span> <span class="err">`</span><span class="n">block</span> <span class="n">in</span> <span class="n">setup</span><span class="err">'</span><span class="o">:</span> <span class="n">You</span> <span class="n">have</span> <span class="n">alrea</span>
+<span class="n">dy</span> <span class="n">activated</span> <span class="n">rack</span> <span class="mf">1.4.5</span><span class="p">,</span> <span class="n">but</span> <span class="n">your</span> <span class="n">Gemfile</span> <span class="n">requires</span> <span class="n">rack</span> <span class="mf">1.4.1</span><span class="p">.</span> <span class="n">Using</span> <span class="n">bundle</span> <span class="n">exec</span> <span class="n">may</span> <span class="n">solve</span> <span class="n">this</span><span class="p">.</span> <span class="p">(</span><span class="n">Gem</span><span class="o">::</span><span class="n">LoadErro</span>
+<span class="n">r</span><span class="p">)</span>
+</pre></div>
+
+
+<p>执行下
+解决方法：执行<code>bundle update; rake install</code></p>
+<hr>
+<h4>6.参考</h4>
+<ul>
+<li><a href="http://octopress.org/docs/">Octopress官方文档</a></li>
+<li><a href="http://fancyoung.com/blog/octopress-study/" title="技术博客利器——Octopress">技术博客利器——Octopress</a></li>
+<li><a href="http://caok1231.com/blog/2012/06/24/install-octopress-to-write-blog/">用octopress来写博客</a></li>
+<li><a href="http://yanping.me/cn/blog/2012/01/07/theming-and-customization/">为Octopress修改主题和自定义样式</a></li>
+<li><a href="http://programus.github.com/blog/2012/03/04/share-weibo-button/">为Octopress追加[分享到微博]按钮</a></li>
+<li><a href="https://github.com/tokkonopapa/octopress-tagcloud">标签云</a></li>
+<li><a href="http://blog.visioncan.com/2011/sass-scss-your-css/">使用scss來加速寫css吧</a></li>
+<li><a href="http://easypi.github.com/blog/2013/01/05/using-octopress-to-setup-blog-on-github/">利用Octopress在github Pages上搭建个人博客</a></li>
+</ul>  
+        </div>
+            <div class="source">
+               <a href="hello-octopress.markdown" id="sourcelink">源代码</a>
+            </div>
+        <div class="art_copy">
+            <p>原载于：chensy's blog</p>
+            <p>本文链接：http://chensy0203.github.com/posts/hello-octopress.html</p>
+            <p>如需转载请以链接形式注明原载或原文地址。</p>      
+        </div>
+	    <ul class="article_info">
+             <!--
+             <li class="cate"></li>
+             <li class="vote"></li>
+             -->
+             <li class="tag">
+                <ul class="tags_list">
+                    <li>
+                        <a href="../categories/octopress.html" rel="tag">octopress</a>
+                    </li>
+                    <li>
+                        <a href="../categories/hello.html" rel="tag">hello</a>
+                    </li>
+                </ul>
+             </li>
+             <li class="date">2013-02-24 15:45</li>
+        </ul>
+    </div>
+    
+    <div class="art_nav">
+        <div class="next">
+            下一篇：
+            <a href="hello-world.html" rel="next">Hello World</a>
+        </div>
+    </div>
+
+        
+    <!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread" data-thread-key="1361691900.0" data-title="&lt;bound method Post.title of &lt;nikola.post.Post object at 0x000000000459C5F8&gt;&gt;" data-author-key="chensy"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chensy0203"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- Duoshuo Comment END -->
+    <span id="post-comments"></span>
+
+
+    </div>
+    <div class="con_right">
+        <div class="about_box">
+            <a href="../stories/about.html" class="avatar_box"><img src="../100x100.png" width="100" height="100" alt="头像"></a>
+            <div class="info">
+                <h3>chensy</h3>
+                <p>Java Web开发工程师，前端爱好者，技术宅，现居广州，创业中</p>
+            </div>
+        </div>
+        
+        <div class="side_box">
+            微博：<a href="http://weibo.com/nc80" target="_blank">@chensy0203</a>
+        </div>
+        <div class="side_box">
+            facebook：<a href="https://www.facebook.com/chensy0203" target="_blank">chensy0203</a>
+        </div>
+    
+        <ul class="cate_box" id="cateBox">
+            <li class="categories">文章分类
+                <ul>
+                   <li class="cat-item "><a href="javascript:void(0)" title="查看下的所有文章"><span class="num">0</span>加载中……</a>
+                   </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="links_box" id="linksBox">
+            <li id="linkcat-2" class="linkcat"><h2>友情链接</h2>
+                <ul class="xoxo blogroll">
+                    <li><a href="http://shuyaochen.diandian.com/" target="_blank">shuyaochen</a></li>
+                    <li><a href="http://stylechen.com/" target="_blank">雨夜带刀</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="links_box" id="linksBox">
+            <li id="linkcat-2" class="linkcat"><h2>推荐网站</h2>
+                <ul class="xoxo blogroll">
+                    <li><a href="https://github.com/" target="_blank">github</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <!--End of body content-->
+
+<div class="footer">
+    Contents © 2013         <a href="mailto:chensy0203@163.com">chensy</a> - Powered by         <a href="http://nikola.ralsina.com.ar">Nikola</a>
+</div>
+<div id="goTop" class="go_top" title="返回顶部"></div>
+
+    <!-- Social buttons -->
+    
+    <!-- End of social buttons -->
+
+
+ <script src="../assets/js/jquery.js" type="text/javascript"></script>
+ <script>
+        $(function(){
+            //文章分类
+            $.getJSON("/assets/js/tag_cloud_data.json", function( data ){
+                var items=[];
+                $.each(data,function(name,numAndUrl){
+                    var liTmpl='<li class="cat-item "><a href="$url" title="查看 $title 下的所有文章"><span class="num">$num</span>$tag</a></li>';
+                    liTmpl = liTmpl.replace("$url",numAndUrl[1]).replace("$num",numAndUrl[0]).replace("$title",name).replace("$tag",name);
+                    items.push(liTmpl);
+                });
+                $("#cateBox .categories ul").html(items.join(''));
+            });
+
+             //滚到评论
+            if(window.location.hash==="#post-comments"){
+                $('html,body').animate({
+                        scrollTop: $('#post-comments').offset().top
+                        },1000);
+            }
+
+            //回到顶部
+            $(window).scroll(function(){  
+                    var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+                    if( scrollt >200 ){  //判断滚动后高度超过200px,就显示  
+                        $("#goTop").fadeIn(400); //淡出     
+                    }else{      
+                        $("#goTop").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
+                    }
+            });
+
+            $("#goTop").click(function(){ 
+                    $("html,body").animate({scrollTop:"0px"},500);
+            });
+        });
+  </script>
+
+
+
+
+</body>
+</html>
