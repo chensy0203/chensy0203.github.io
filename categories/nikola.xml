@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>chensy's blog (nikola)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Fri, 05 Jul 2013 16:38:21 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello-nikola</title><link>http://chensy0203.github.com/posts/hello-nikola.html</link><description>&lt;p&gt;nikola 的优点:不依赖 ruby 包，支持 reStructuredText 与 markdown 两种源文档格式。&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;生成站点的根目录并进行初始化：&lt;/dt&gt;
+&lt;dd&gt;$ nikola init 站点名称&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;然后应当对站点进行一些配置，即修改 conf.py 文件&lt;/p&gt;
+&lt;p&gt;$ nikola new_post
+Creating New Post
+-----------------&lt;/p&gt;
+&lt;p&gt;Enter title:
+#=&amp;gt; 请在此输入文章标题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;!-- title: 测试 --&gt;
+&lt;!-- slug: ce-shi --&gt;
+&lt;!-- date: 2013/02/05 10:51:46 --&gt;
+&lt;!-- tags: --&gt;
+&lt;!-- link: --&gt;
+&lt;!-- description: --&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 23)&lt;/p&gt;
+Explicit markup ends without a blank line; unexpected unindent.&lt;/div&gt;
+&lt;p&gt;Write your post here.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 24)&lt;/p&gt;
+Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
+&lt;p&gt;其中前 6 行皆为可被 nikola 解析的文档导言区，它们分别定义了文章的标题、页面名、创建日期、标签、源文件地址、HTML 的 META 标签。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://rca.is-programmer.com/2013/2/5/using-nikola-write-static-blog.37513.html"&gt;http://rca.is-programmer.com/2013/2/5/using-nikola-write-static-blog.37513.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://serialized.net/2013/03/moving-from-octopress-to-nikola/"&gt;http://serialized.net/2013/03/moving-from-octopress-to-nikola/&lt;/a&gt;&lt;/p&gt;</description><category>hello</category><category>nikola</category><guid>http://chensy0203.github.com/posts/hello-nikola.html</guid><pubDate>Mon, 01 Jul 2013 18:42:22 GMT</pubDate></item></channel></rss>

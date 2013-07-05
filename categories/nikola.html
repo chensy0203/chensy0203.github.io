@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="description" content="chensy's blog">
     <meta name="author" content="chensy">
-    <title>文章分类：markdown | chensy's blog</title>
+    <title>文章分类：nikola | chensy's blog</title>
     
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/myrst.css" rel="stylesheet" type="text/css">
-        <link rel="alternate" type="application/rss+xml" title="RSS for tag markdown (zh_cn)" href="markdown.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS for tag nikola (zh_cn)" href="nikola.xml">
             <link rel="icon" href="../16x16.png" sizes="16x16">
 
     
@@ -45,48 +45,38 @@
     
         <div class="article_box">
             <div class="article_title">
-                <h3><a href="../posts/hello-markdown.html">hello-markdown</a></h3>
-                <div class="comment_num comment_highlight">
-                    <a href="../posts/hello-markdown.html#post-comments" title="">
-                    <span data-thread-key="1372390066.0" class="ds-thread-count" data-count-type="comments">暂无评论</span>
-                    </a>
-                </div>
+                <h3><a href="../posts/hello-nikola.html">hello-nikola</a></h3>
             </div>
             <div class="entry ">
-                <div><h2>Markdown 语法说明 (简体中文版)</h2>
-<ul>
-<li><a href="../posts/hello-markdown.html#overview">概述</a><ul>
-<li><a href="../posts/hello-markdown.html#philosophy">宗旨</a></li>
-<li><a href="../posts/hello-markdown.html#html">兼容 HTML</a></li>
-<li><a href="../posts/hello-markdown.html#autoescape">特殊字符自动转换</a></li>
-</ul>
-</li>
-<li><a href="../posts/hello-markdown.html#block">区块元素</a><ul>
-<li><a href="../posts/hello-markdown.html#p">段落和换行</a></li>
-<li><a href="../posts/hello-markdown.html#header">标题</a></li>
-<li><a href="../posts/hello-markdown.html#blockquote">区块引用</a></li>
-<li><a href="../posts/hello-markdown.html#list">列表</a></li>
-<li><a href="../posts/hello-markdown.html#precode">代码区块</a></li>
-<li><a href="../posts/hello-markdown.html#hr">分隔线</a></li>
-</ul>
-</li>
-<li><a href="../posts/hello-markdown.html#span">区段元素</a><ul>
-<li><a href="../posts/hello-markdown.html#link">链接</a></li>
-<li><a href="../posts/hello-markdown.html#em">强调</a></li>
-<li><a href="../posts/hello-markdown.html#code">代码</a></li>
-<li><a href="../posts/hello-markdown.html#img">图片</a></li>
-</ul>
-</li>
-<li><a href="../posts/hello-markdown.html#misc">其它</a><ul>
-<li><a href="../posts/hello-markdown.html#backslash">反斜杠</a></li>
-<li><a href="../posts/hello-markdown.html#autolink">自动链接</a></li>
-</ul>
-</li>
-<li><a href="../posts/hello-markdown.html#acknowledgement">感谢</a></li>
-<li><a href="../posts/hello-markdown.html#editor">Markdown 免费编辑器</a></li>
-</ul>
-<hr>
-<div class="more"><a href="../posts/hello-markdown.html">阅读全文 »</a></div></div>
+                <p>nikola 的优点:不依赖 ruby 包，支持 reStructuredText 与 markdown 两种源文档格式。</p>
+<dl class="docutils">
+<dt>生成站点的根目录并进行初始化：</dt>
+<dd>$ nikola init 站点名称</dd>
+</dl>
+<p>然后应当对站点进行一些配置，即修改 conf.py 文件</p>
+<p>$ nikola new_post
+Creating New Post
+-----------------</p>
+<p>Enter title:
+#=&gt; 请在此输入文章标题</p>
+<blockquote>
+<!-- title: 测试 -->
+<!-- slug: ce-shi -->
+<!-- date: 2013/02/05 10:51:46 -->
+<!-- tags: -->
+<!-- link: -->
+<!-- description: -->
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 23)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Write your post here.</p>
+</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 24)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<p>其中前 6 行皆为可被 nikola 解析的文档导言区，它们分别定义了文章的标题、页面名、创建日期、标签、源文件地址、HTML 的 META 标签。</p>
+<p><a class="reference external" href="http://rca.is-programmer.com/2013/2/5/using-nikola-write-static-blog.37513.html">http://rca.is-programmer.com/2013/2/5/using-nikola-write-static-blog.37513.html</a></p>
+<p><a class="reference external" href="http://serialized.net/2013/03/moving-from-octopress-to-nikola/">http://serialized.net/2013/03/moving-from-octopress-to-nikola/</a></p>
             </div>
             <ul class="article_info">
                  <!--
@@ -96,14 +86,14 @@
                  <li class="tag">
                     <ul class="tags_list">
                         <li>
-                            <a href="#" rel="tag">markdown</a>
+                            <a href="hello.html" rel="tag">hello</a>
                         </li>
                         <li>
-                            <a href="hello.html" rel="tag">hello</a>
+                            <a href="#" rel="tag">nikola</a>
                         </li>
                     </ul>
                  </li>
-                <li class="date">2013-06-28 11:27</li>
+                <li class="date">2013-07-01 18:42</li>
             </ul>
         </div>
     
