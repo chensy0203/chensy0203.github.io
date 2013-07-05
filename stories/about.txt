@@ -3,7 +3,7 @@
 .. slug: about
 .. date: 2013/06/23 20:01:24
 .. title: 关于我
-.. description: 
+.. description: chensy, web开发, Java, 前端, 工程师
 
 .. image:: /128x128.png
 

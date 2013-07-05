@@ -1296,3 +1296,44 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 
+
+.vm {position: relative; margin-top: 60px;}
+.vm>li {
+    list-style-type: none; 
+    width: 230px; 
+    background: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+}
+.vm>li:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+}
+.vm>li .title {
+    _padding-bottom: 5px;
+    _margin: -15px;
+    _margin-top: 15px; 
+}
+.vm>li .title a {
+    color: #333; display: block;
+    text-decoration: none;
+    font-weight: bold; 
+    font-size: 13px;
+    line-height: 160%;
+    padding: 15px 20px;
+}
+
+.vm_drafts {
+    display: none;
+}
+.vm>li.status_0 {
+    _display: none;
+}
+
+.vm>li img, .vm>li iframe {display: block; border-radius: 3px;}
+.vm>li iframe {border: 1px solid #ccc;}
+.thumbnail {position: relative; display: block; overflow: hidden; padding: 15px; border-bottom: 1px solid #ccc;}
+.thumbnail::before {
+    width: 100%; height: 100%;
+    position: absolute; top: 0; left: 0;
+    content: ''; 
+}

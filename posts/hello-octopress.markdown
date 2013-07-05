@@ -5,7 +5,7 @@
 .. tags: octopress, hello
 .. comment: True
 .. link:
-.. description:
+.. description: octopress, windows7, GitHub Pages, 静态博客 
 -->
 
 ## 写在前面

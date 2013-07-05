@@ -1,0 +1,69 @@
+.. date: 2013/07/05 18:46:21
+.. title: bookshelf
+.. tags: 
+.. slug: bookshelf
+.. comment: True
+.. link: 
+.. description: 编写高质量代码, Web前端开发修炼之道, 锋利的jQuery, JavaScript修炼之道, 电子书
+.. template: page.tmpl
+
+.. raw:: html
+
+	<div class="page_title">
+		<ul class="breadcrumbs">
+			<li><a href="javascript:void(0)">书架</a></li>
+			<li class="arrow">›</li>
+			<li>那些年我看过的书……</li>
+		</ul>
+	</div>
+	<ul class="vm vm_featured" id="bookshelf">
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/bxgzldm.jpg" src="../assets/images/spacer.gif" width="200" height="286"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">编写高质量代码:Web前端开发修炼之道</a></div>
+	</li>
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/fldjquery.jpg" src="../assets/images/spacer.gif" width="200" height="328"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">锋利的jQuery</a></div>
+	</li>
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/javascriptxlzd.jpg" src="../assets/images/spacer.gif" width="200" height="328"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">JavaScript修炼之道</a></div>
+	</li>
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/mysqlbzbh.jpg" src="../assets/images/spacer.gif" width="200" height="328"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">MySQL必知必会</a></div>
+	</li>
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/javacxysbndse.jpg" src="../assets/images/spacer.gif" width="200" height="328"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">Java程序员上班那点事儿</a></div>
+	</li>
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/4.png" src="../assets/images/spacer.gif" width="200" height="286"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">汗，想不起还看过什么书了</a></div>
+	</li>
+	</ul>
+
+	<script src="../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../assets/js/lazyload.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.wookmark.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $('.vm_featured>li').wookmark({offset: 20, itemWidth: 230, autoResize: true, container: $("#bookshelf")});
+	});
+
+	$("img").lazyload({
+	    effect: "fadeIn"
+	});
+	</script>

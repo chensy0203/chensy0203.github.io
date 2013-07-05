@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog (rst)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Fri, 05 Jul 2013 16:46:21 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello-rst</title><link>http://chensy0203.github.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
+<rss version="2.0"><channel><title>chensy's blog (rst)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Fri, 05 Jul 2013 21:43:16 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello-rst</title><link>http://chensy0203.github.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
 &lt;h2&gt;rst语法简介&lt;/h2&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h3&gt;空行分段&lt;/h3&gt;
