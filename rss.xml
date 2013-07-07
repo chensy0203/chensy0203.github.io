@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Fri, 05 Jul 2013 21:43:16 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
+<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 07 Jul 2013 17:09:00 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>关于博客</title><link>http://chensy0203.github.com/posts/about-blog.html</link><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;有一段时间，流行Qzone，那时我也反拼命地装扮自己的空间，互踩，浇花……&lt;/p&gt;
+&lt;p&gt;后来流行写一些散文诗，写写小说，我把我的blog移到了163……&lt;/p&gt;
+&lt;p&gt;后来开始学习编程，把博客放到了JavaEye，写一些笔记，转载一些文章……&lt;/p&gt;
+&lt;p&gt;当有能力用Java写一个博客时，却苦于没有免费的空间……&lt;/p&gt;
+&lt;p&gt;后来买了个域名，用wordpress搭了一个博客，一年后废了……&lt;/p&gt;
+&lt;p&gt;13年初，又兴起了写博客的欲望，发现现在流行静态博客，于是我用Octopress搭了一个……&lt;/p&gt;
+&lt;p&gt;最近，我又从Octopress转到了Nikola……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/about-blog.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>blog</category><guid>http://chensy0203.github.com/posts/about-blog.html</guid><pubDate>Sun, 07 Jul 2013 14:43:01 GMT</pubDate></item><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#overview"&gt;概述&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#philosophy"&gt;宗旨&lt;/a&gt;&lt;/li&gt;

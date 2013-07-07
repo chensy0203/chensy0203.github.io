@@ -5,7 +5,7 @@
 .. link: http://wowubuntu.com/markdown/
 .. slug: hello-markdown
 .. comment: True
-.. description: Markdown, 语法
+.. description: Markdown 语法
 -->
 
 
