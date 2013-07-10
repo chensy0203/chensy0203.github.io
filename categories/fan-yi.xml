@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>chensy's blog (翻译)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Wed, 10 Jul 2013 23:05:13 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pure中文网站终于安家落户了</title><link>http://chensy0203.github.com/posts/pure-css-zh.html</link><description>&lt;p&gt;断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。&lt;/p&gt;
+&lt;p&gt;近期，我很想翻译一些东西，学习下新知识，复习下英语，顺便丰富下博客内容。我刚好在近期的一个小项目试用了下pure，感觉不错，小巧简洁，上手快，不过目前还没有中文文档，刚好我可以翻译下^_^。&lt;/p&gt;
+&lt;p&gt;想到，就开始做。&lt;/p&gt;
+&lt;p&gt;昨天在github上把 &lt;a class="reference external" href="https://github.com/yui/pure-site"&gt;pure-site&lt;/a&gt; clone了一份到本地，尝试翻译了一小部分，感觉挺顺利的。&lt;/p&gt;
+&lt;p&gt;虽然，只是翻译了一点点，但还是想把中文网站部署到线上先。&lt;/p&gt;
+&lt;p&gt;今天，我才发现我没有主机，于是上网找了一些支持nodejs的免费主机。由于国情，邀先选择了国内的云平台。于是，上BAE申请邀请码，但现在还没回复，看网上评论说，有的几个星期都没有回复，汗！接着，就去找NAE的邀请码，居然在 &lt;a class="reference external" href="http://www.v2ex.com/"&gt;V2EX&lt;/a&gt; 求得了一个，太开心了！但是当把项目部署到NAE上时，中间没提示任何错，以为是成功了，但是最终提示未监听端口，google了下好多方法，试了都不行，看了下应用广场，大部人创建的应用都是访问不了的，也有人遇到跟我同样的问题。算了，试下国外的服务吧。试了下OpenShift，用得莫名奇妙的，放弃！最后试了下AppFog，照着文档说明尝试了几次，弄明白了用法后，果断成功了。&lt;/p&gt;
+&lt;p&gt;网站基本架设好了，明天开始就可以抽时间专心翻译了^_^。&lt;/p&gt;</description><category>翻译</category><guid>http://chensy0203.github.com/posts/pure-css-zh.html</guid><pubDate>Wed, 10 Jul 2013 22:25:11 GMT</pubDate></item></channel></rss>

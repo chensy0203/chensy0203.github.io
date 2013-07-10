@@ -1,0 +1,41 @@
+.. description: 
+.. link: 
+.. title: 翻译
+.. slug: translation
+.. tags: 
+.. date: 2013/07/09 17:05:52
+.. comment: True
+.. description: Pure中文版,Pure中文翻译
+.. template: page.tmpl
+
+.. raw:: html
+
+
+	<div class="page_title">
+		<ul class="breadcrumbs">
+			<li><a href="javascript:void(0)">翻译</a></li>
+			<li class="arrow">›</li>
+			<li>正在翻译中……</li>
+		</ul>
+	</div>
+	<ul class="vm vm_featured" id="bookshelf">
+	<li class="">
+	    <a target="_ablank" href="http://pure-site.ap01.aws.af.cm/" class="thumbnail">
+	        <img data-original="../assets/images/pure-zh.jpg" src="../assets/images/spacer.gif" width="200" height="265"/>
+	    </a>
+	    <div class="title"><a target="_ablank" href="http://pure-site.ap01.aws.af.cm/">雅虎的一个css框架：Pure</a></div>
+	</li>
+	</ul>
+
+	<script src="../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../assets/js/lazyload.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.wookmark.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $('.vm_featured>li').wookmark({offset: 20, itemWidth: 230, autoResize: true, container: $("#bookshelf")});
+	});
+
+	$("img").lazyload({
+	    effect: "fadeIn"
+	});
+	</script>

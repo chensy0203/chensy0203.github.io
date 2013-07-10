@@ -102,3 +102,11 @@
 .entry hr.docutils{
 	width:100%;
 }
+
+.entry .underline{
+  text-decoration: underline;
+}
+
+.entry .strike{
+  text-decoration: line-through;
+}

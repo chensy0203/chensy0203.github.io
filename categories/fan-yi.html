@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="description" content="chensy's blog">
     <meta name="author" content="chensy">
-    <title>标签 | chensy's blog</title>
+    <title>文章分类：翻译 | chensy's blog</title>
     
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/myrst.css" rel="stylesheet" type="text/css">
-            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS for tag 翻译 (zh_cn)" href="fan-yi.xml">
             <link rel="icon" href="../16x16.png" sizes="16x16">
 
     
@@ -42,21 +42,42 @@
 
     <div class="con_left" id="conLeft">
         
-	<div class="article_box">
-        <div class="article_title">
-            <h3>标签</h3>
+        <div class="article_box">
+            <div class="article_title">
+                <h3><a href="../posts/pure-css-zh.html">pure中文网站终于安家落户了</a></h3>
+            </div>
+            <div class="entry ">
+                <p>断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。</p>
+<p>近期，我很想翻译一些东西，学习下新知识，复习下英语，顺便丰富下博客内容。我刚好在近期的一个小项目试用了下pure，感觉不错，小巧简洁，上手快，不过目前还没有中文文档，刚好我可以翻译下^_^。</p>
+<p>想到，就开始做。</p>
+<p>昨天在github上把 <a class="reference external" href="https://github.com/yui/pure-site">pure-site</a> clone了一份到本地，尝试翻译了一小部分，感觉挺顺利的。</p>
+<p>虽然，只是翻译了一点点，但还是想把中文网站部署到线上先。</p>
+<p>今天，我才发现我没有主机，于是上网找了一些支持nodejs的免费主机。由于国情，邀先选择了国内的云平台。于是，上BAE申请邀请码，但现在还没回复，看网上评论说，有的几个星期都没有回复，汗！接着，就去找NAE的邀请码，居然在 <a class="reference external" href="http://www.v2ex.com/">V2EX</a> 求得了一个，太开心了！但是当把项目部署到NAE上时，中间没提示任何错，以为是成功了，但是最终提示未监听端口，google了下好多方法，试了都不行，看了下应用广场，大部人创建的应用都是访问不了的，也有人遇到跟我同样的问题。算了，试下国外的服务吧。试了下OpenShift，用得莫名奇妙的，放弃！最后试了下AppFog，照着文档说明尝试了几次，弄明白了用法后，果断成功了。</p>
+<p>网站基本架设好了，明天开始就可以抽时间专心翻译了^_^。</p>
+            </div>
+            <ul class="article_info">
+                 <!--
+                 <li class="cate"></li>
+                 <li class="vote"></li>
+                 -->
+                 <li class="tag">
+                    <ul class="tags_list">
+                        <li>
+                            <a href="#" rel="tag">翻译</a>
+                        </li>
+                    </ul>
+                 </li>
+                <li class="date">2013-07-10 22:25</li>
+            </ul>
         </div>
-        <div class="entry">  
-		    <ul class="unstyled bricks">
-		        <li><a class="reference" href="blog.html">blog</a></li>
-		        <li><a class="reference" href="hello.html">hello</a></li>
-		        <li><a class="reference" href="markdown.html">markdown</a></li>
-		        <li><a class="reference" href="octopress.html">octopress</a></li>
-		        <li><a class="reference" href="rst.html">rst</a></li>
-		        <li><a class="reference" href="fan-yi.html">翻译</a></li>
-		    </ul> 
-        </div>
-    </div>
+    
+<div class="pager_box">
+<ul class="pager">
+</ul>
+</div>
+
+
+
 
     </div>
     <div class="con_right">
@@ -147,6 +168,17 @@
   </script>
 
     
+ <script>
+    var duoshuoQuery = {short_name:"chensy0203"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
 
 
 
