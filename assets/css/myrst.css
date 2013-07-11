@@ -110,3 +110,5 @@
 .entry .strike{
   text-decoration: line-through;
 }
+
+.entry p{line-height: 200%}

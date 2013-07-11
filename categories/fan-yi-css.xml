@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog (翻译)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Thu, 11 Jul 2013 12:53:11 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pure中文网站终于安家落户了</title><link>http://chensy0203.github.com/posts/pure-css-zh.html</link><description>&lt;p&gt;断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。&lt;/p&gt;
+<rss version="2.0"><channel><title>chensy's blog (翻译 css)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Thu, 11 Jul 2013 12:52:56 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pure中文网站终于安家落户了</title><link>http://chensy0203.github.com/posts/pure-css-zh.html</link><description>&lt;p&gt;断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。&lt;/p&gt;
 &lt;p&gt;近期，我很想翻译一些东西，学习下新知识，复习下英语，顺便丰富下博客内容。我刚好在近期的一个小项目试用了下pure，感觉不错，小巧简洁，上手快，不过目前还没有中文文档，刚好我可以翻译下^_^。&lt;/p&gt;
 &lt;p&gt;想到，就开始做。&lt;/p&gt;
 &lt;p&gt;昨天在github上把 &lt;a class="reference external" href="https://github.com/yui/pure-site"&gt;pure-site&lt;/a&gt; clone了一份到本地，尝试翻译了一小部分，感觉挺顺利的。&lt;/p&gt;
@@ -22,4 +22,4 @@
 &lt;li&gt;翻译更新页面&lt;/li&gt;
 &lt;li&gt;增加Demo展示&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;</description><category>翻译</category><category>css</category><guid>http://chensy0203.github.com/posts/pure-css-zh.html</guid><pubDate>Wed, 10 Jul 2013 22:25:11 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>翻译 css</category><guid>http://chensy0203.github.com/posts/pure-css-zh.html</guid><pubDate>Wed, 10 Jul 2013 22:25:11 GMT</pubDate></item></channel></rss>
