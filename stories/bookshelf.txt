@@ -11,7 +11,7 @@
 
 	<div class="page_title">
 		<ul class="breadcrumbs">
-			<li><a href="javascript:void(0)">书架</a></li>
+			<li><a href="javascript:void(0)">我的书架</a></li>
 			<li class="arrow">›</li>
 			<li>那些年我看过的书……</li>
 		</ul>
@@ -54,8 +54,6 @@
 	    <div class="title"><a href="javascript:void(0)">汗，想不起还看过什么书了</a></div>
 	</li>
 	</ul>
-
-	<script src="../assets/js/jquery.js"></script>
 	<script type="text/javascript" src="../assets/js/lazyload.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery.wookmark.js"></script>
 	<script type="text/javascript">

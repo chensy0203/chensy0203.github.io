@@ -1,4 +1,3 @@
-.. description: 
 .. link: 
 .. title: 翻译
 .. slug: translation
@@ -13,9 +12,9 @@
 
 	<div class="page_title">
 		<ul class="breadcrumbs">
-			<li><a href="javascript:void(0)">翻译</a></li>
+			<li><a href="javascript:void(0)">我的书架</a></li>
 			<li class="arrow">›</li>
-			<li>正在翻译中……</li>
+			<li>翻译也是一种学习</li>
 		</ul>
 	</div>
 	<ul class="vm vm_featured" id="bookshelf">
@@ -27,7 +26,6 @@
 	</li>
 	</ul>
 
-	<script src="../assets/js/jquery.js"></script>
 	<script type="text/javascript" src="../assets/js/lazyload.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery.wookmark.js"></script>
 	<script type="text/javascript">

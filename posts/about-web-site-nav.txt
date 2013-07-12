@@ -1,0 +1,29 @@
+.. description: 
+.. title: 前端导航页面面世了
+.. date: 2013/07/12 21:34:08
+.. link: 
+.. slug: about-web-site-nav
+.. tags: 前端
+
+折腾了一天，终于把 `前端导航 </stories/web-site-nav.html>`_ 的页面做好了^_^。
+
+是win8 metro 风格 ，看起来还行，就是随机配色有时不太好，随机算法太初级了，迟点再优化。
+
+然后，只是简单整理了一些内容上去，以后会继续丰富的。
+
+
+
+TODO
+====
+.. role:: strike
+   :class: strike
+
+* :strike:`搭建前端导航页面` 2013-07-12
+* :strike:`前端博客列表` 2013-07-12
+* 优化导航页面随机颜色算法
+* JS框架
+* CSS框架
+* node.js
+* HTML5&CSS3
+* 前端集成解决方案
+* 前端工具列表

@@ -1,0 +1,289 @@
+.. link: 
+.. title: 前端导航
+.. date: 2013/07/11 19:39:36
+.. tags: 
+.. slug: web-site-nav
+.. comment: True
+.. description: 前端网站, 前端博客, 前端开发, 在线工具, Css框架, Js框架
+.. template: page.tmpl
+
+.. raw:: html 
+
+	<div class="page_title">
+		<ul class="breadcrumbs">
+			<li><a href="javascript:void(0)">前端导航</a></li>
+			<li class="arrow">›</li>
+			<li>这些年值得你知道的网站……</li>
+		</ul>
+	</div>
+
+	<div class="article_box full_width" id="front-end-blog">
+		<div class="article_title full_width mb0">
+			<h3>前端博客</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+				<div class="widget_box">
+		            <a target="_blank" class="widget_list widget2x2" href="http://fed.renren.com/">人人网FED</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://mux.baidu.com/" title="">百度MUX</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://wsd.tencent.com/" title="">腾讯WSD</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.alloyteam.com/" title="">AlloyTeam</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://isux.tencent.com/">腾讯ISUX</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://cdc.tencent.com/">腾讯CDC</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.taobao.com/blog"
+		               title="">淘宝UED</a>
+		          	<a target="_blank" class="widget_list widget4x2" href="http://bonsaiden.github.io/JavaScript-Garden/zh/"
+		               title="">JavaScript 秘密花园</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://www.zhangxinxu.com/wordpress/">张鑫旭-鑫空间鑫生活</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.alipay.com/">支付宝UED</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.aliued.cn/">阿里爸爸UED</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.cnblogs.com/rubylouvre/">司徒正美</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.alimama.com/">阿里妈妈UED</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.ctrip.com/blog/">携程UED</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.sina.com.cn/">新浪UED</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://js8.in/">三水清</a>
+				</div>
+				<div class="widget_box">
+					<a target="_blank" class="widget_list widget2x2" href="http://stylechen.com/">雨夜带刀</a>
+			    	<a target="_blank" class="widget_list widget4x2" href="http://www.ruanyifeng.com/blog/it/">阮一峰的网络日志</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://uicss.cn/">CK'S blog</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.iciba.com/">爱词霸UED</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://dailyjs.com/">dailyjs</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://www.csser.com/">csser</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://www.gbin1.com/" title="">GB</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://blog.bingo929.com/">彬Go</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://jiongks.name/">勾三股四</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://i.wanz.im/">丸子の部落</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://www.wgcss.com/">蜈蚣's Blog</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://www.19ued.com/">19Lou.com DKUED</a>
+					<a target="_blank" class="widget_list widget2x2" href="http://www.cnblogs.com/cloudgamer/">cloudgamer</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://www.welefen.com/">welefen的随笔</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://blog.linxz.de/">小志个人博客</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://www.qianduan.net/">前端观察</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://www.imququ.com/">JerryQu的小站</a>
+			   	</div>
+				<div class="widget_box">
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.quchao.com/">屈超-時計坂</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://ued.koubei.com/">口碑网UED</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://sofish.de/">sofish-幸福收藏夹</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.quirksmode.org/" title="ppk大神的博客">quirksmode</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://www.w3cplus.com">w3cplus</a>
+			        <a target="_blank" class="widget_list widget1x1" href="http://www.silverna.org/blog/">月影</a>
+			        <a target="_blank" class="widget_list widget1x1" href="http://www.ooxx.me/">大猫</a>
+			        <a target="_blank" class="widget_list widget1x1" href="http://www.aoao.org.cn/blog/">嗷嗷</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://hikejun.com/blog/">Kejun-贪玩前端技术</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://www.gracecode.com/">明城(mingcheng)</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://blog.f2er.net/">情封–web记事本</a>
+			        <a target="_blank" class="widget_list widget2x2" href="http://www.jslover.com/">jslover</a>
+			        <a target="_blank" class="widget_list widget1x1" href="http://www.woaicss.com/">蜗爱css</a>
+			        <a target="_blank" class="widget_list widget1x1" href="http://www.99css.com/">99css</a>
+			        <a target="_blank" class="widget_list widget1x1" href="http://blog.moocss.com">moocss</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://www.cssforest.org/blog/">csss森林</a>
+					<a target="_blank" class="widget_list widget2x2" href="http://www.planabc.net/">怿飞's Blog</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://js.fgm.cc/learn/">Ferris-原生js学习</a>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article_box full_width" id="front-end-tool">
+		<div class="article_title full_width mb0" >
+			<h3>前端工具</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+				<div class="widget_box">
+					<a target="_blank" class="widget_list widget4x2" href="http://www.smushit.com/ysmush.it/">YAHOO
+		                smushit</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://getfirebug.com/firebuglite">firebug
+		                lite</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://seo.chinaz.com/">SEO概况查询</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://tool.chinaz.com/js.aspx">js综合工具</a>
+					<a target="_blank" class="widget_list widget1x1" href="http://csslint.net/">csslint</a>
+		            <a target="_blank" class="widget_list widget1x1" href=" http://www.jslint.com/">jslint</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://www.fiddler2.com/" target="_blank">fiddler</a>
+		            <a target="_blank" class="widget_list widget1x1" href="http://getf5.com/">F5</a>
+		            <a target="_blank" class="widget_list widget2x2"
+		               href="http://www.w3cfuns.com/tools-index.html">前端神器</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://spriteme.org/"
+		               title="很不错的一款css sprite工具，很强大">spriteme</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://jsobfuscate.com/" title="">js代码混淆工具</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://jspretty.com/" title="">js代码美化工具</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://preloaders.net/en/circular" title="">gif loading生成器</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article_box full_width" id="html5-css3">
+		<div class="article_title full_width mb0">
+			<h3>HTML5 & CSS3</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+				<div class="widget_box">
+					<a target="_blank" class="widget_list widget4x2" href="http://www.mhtml5.com/">HTML5研究小组</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://html5doctor.com/">html5doctor</a>
+		            <a target="_blank" class="widget_list widget4x2"
+		               href="http://www.css3generator.com/">css3generator</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://css3please.com/">css3please</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://css3builder.com/">css3builder</a>
+					<a target="_blank" class="widget_list widget2x2" href="http://www.css3maker.com/">css3maker</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.colorzilla.com/">colorzilla</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://www.useragentman.com/IETransformsTranslator/">IETransformsTranslator</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://css-tricks.com/examples/ButtonMaker/">ButtonMaker</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="article_box full_width" id="css-framework">
+		<div class="article_title full_width mb0" >
+			<h3>CSS框架</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+				<div class="widget_box">
+			        <a target="_blank" class="widget_list widget4x2" href="http://purecss.io/">Pure</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://pure-site.ap01.aws.af.cm/">Pure 中文</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://twitter.github.io/bootstrap/">Bootstrap</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://wrongwaycn.github.io/bootstrap/docs/index.html">BootStrap 中文</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="article_box full_width" id="js-framework">
+		<div class="article_title full_width mb0" >
+			<h3>JS框架</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+		        <div class="widget_box">
+			    	<a target="_blank" class="widget_list widget4x2" href="http://seajs.org/">Sea.js</a>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="article_box full_width" id="nodejs">
+		<div class="article_title full_width mb0" >
+			<h3>node.js</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+		        <div class="widget_box">
+			    	<a target="_blank" class="widget_list widget4x2" href="http://expressjs.com/">express</a>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="article_box full_width" id="front-end-solution">
+		<div class="article_title full_width mb0" >
+			<h3>前端集成解决方案</h3>
+		</div>
+		<div class="widget_box_btn">
+			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
+		</div>
+		<div class="article_inner_box">
+			<div class="widget_box_list">
+				<div class="widget_box">
+		            <a target="_blank" class="widget_list widget4x2" href="http://fis.baidu.com/">F.I.S</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page_title">
+		<ul class="breadcrumbs">
+			<li>还有好多没整理，暂时就先这样吧……</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			 var bgcolors = ["bgcolor1", "bgcolor2", "bgcolor3", "bgcolor4", "bgcolor5", "bgcolor6", "bgcolor7", "bgcolor8", "bgcolor9", "bgcolor10", "bgcolor11", "bgcolor12", "bgcolor13"];
+			 var bbgcolors = ["bbgcolor3", "bbgcolor2", "bbgcolor1","bbgcolor2", "bbgcolor3", "bbgcolor1", "bbgcolor2", "bbgcolor3"];
+			 var setNavBtn = function(){
+			 	$(".article_box").each(function(){
+		      		var $aBox = $(this),
+		      			$wBoxList = $aBox.find(".widget_box_list"),
+		      			$iBox = $aBox.find(".article_inner_box");
+		      			if($iBox[0].scrollLeft>0){
+		      				$aBox.find(".arrow_left").removeClass("hidden");
+		      			}else{
+		      				$aBox.find(".arrow_left").addClass("hidden");
+		      			}
+		      			if($iBox[0].scrollLeft < $wBoxList.width()-$iBox.width()){
+		      				$aBox.find(".arrow_right").removeClass("hidden");
+		      			}else{
+		      				$aBox.find(".arrow_right").addClass("hidden");
+		      			}
+		      	});
+			 }
+	          //遍历随机颜色值
+		      $(".widget_box .widget_list").each(function () {
+		            var num = Math.floor(Math.random() * 13);
+		            $(this).addClass(bgcolors[num]);
+		      });
+		      $(".article_box").each(function(i){
+		            $(this).addClass(bbgcolors[i]);
+		            $(this).find(".article_title").addClass(bbgcolors[i]).find("h3").css({"color":"white"});
+		      });
+		      //设置导航
+		      $(".article_box").each(function(){
+		      		var $abox = $(this);
+		      		var $wboxs = $abox.find(".widget_box");
+		      		var nw = $wboxs.length * $abox.width();
+		      		$wboxs.parent().width(nw);
+      				setNavBtn($abox);
+		      });
+		      setNavBtn();
+		      $(".article_box .nav_arrow").click(function(){
+		      		var $aBox = $(this).parent().parent(),
+		      			$wBoxList = $aBox.find(".widget_box_list"),
+		      			$iBox = $aBox.find(".article_inner_box");
+		      		if($(this).hasClass("arrow_left")){//上一页，左移，显示右边
+		      			var cur = $iBox[0].scrollLeft- 1000;
+		      			if(cur<0){
+		      				cur=0;
+		      			}
+		      			$iBox.animate({scrollLeft:cur+"px"},500,function(){
+		      				setNavBtn();
+		      			});
+		      		}else{//右移，显示左边
+		      			var cur = $iBox[0].scrollLeft + 1000;
+		      			var mLen = $wBoxList.width()-$iBox.width();
+		      			if(cur>mLen){
+		      				cur=mLen;
+		      			}
+		      			$iBox.animate({scrollLeft:cur+"px"},500,function(){
+		      				setNavBtn();
+		      			});
+		      			
+		      		}
+		      });
+		});
+	</script>
+
