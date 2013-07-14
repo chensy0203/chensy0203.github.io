@@ -4,6 +4,7 @@
 .. tags: 翻译, css
 .. slug: pure-css-zh
 .. link: 
+.. comment: True
 
 断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。
 
@@ -28,13 +29,13 @@ TODO
 
 * :strike:`搭建中文网站` 2013-07-10
 * :strike:`翻译HOME页面` 2013-07-11
-* 翻译Base模块
-* 翻译Grids模块
-* 翻译Forms模块
-* 翻译Buttons模块
-* 翻译Tables模块
-* 翻译Menus模块
+* :strike:`翻译Base模块` 2013-07-14
+* :strike:`翻译Grids模块` 2013-07-14
+* :strike:`翻译Forms模块` 2013-07-14
+* :strike:`翻译Buttons模块` 2013-07-14
+* :strike:`翻译Tables模块` 2013-07-14
+* :strike:`翻译Menus模块` 2013-07-14
 * 翻译定制页面
 * 翻译扩展页面
-* 翻译更新页面
+* 核对翻译页面
 * 增加Demo展示
