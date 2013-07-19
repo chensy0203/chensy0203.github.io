@@ -83,7 +83,7 @@
 		            <a target="_blank" class="widget_list widget4x2" href="http://sofish.de/">sofish-幸福收藏夹</a>
 			   	</div>
 				<div class="widget_box">
-			        <a target="_blank" class="widget_list widget4x2" href="http://hikejun.com/blog/">Kejun-贪玩前端技术</a>
+			        <a target="_blank" class="widget_list widget4x2" href="http://hikejun.com/blog/">Kejun's Blog</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://www.quchao.com/">屈超-時計坂</a>
 			        <a target="_blank" class="widget_list widget2x2" href="http://www.jslover.com/">jslover</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://www.quirksmode.org/" title="ppk大神的博客">quirksmode</a>
@@ -101,6 +101,13 @@
 		            <a target="_blank" class="widget_list widget2x2" href="http://www.cssforest.org/blog/">csss森林</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://elya.cc/">落花流水——elya妞</a>
 		            <a target="_blank" class="widget_list widget4x2" href="http://www.wufangbo.com/">前端开发-武方博</a>
+			    </div>
+			    <div class="widget_box">
+					<a target="_blank" class="widget_list widget4x2" href="http://xiep.net/">鹏鹏's Blog</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://blog.ueder.info/">不想飞的蛤蟆不是好刺猬</a>
+					<a target="_blank" title="还有一个Web前端实验室" class="widget_list widget4x2" href="http://blog.doyoe.com/">CSS探索之旅</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://blog.mycolorway.com/">彩程设计</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://www.cssha.com/">前端手记</a>
 			    </div>
 			</div>
 		</div>
@@ -164,6 +171,10 @@
 					<a target="_blank" class="widget_list widget2x2" href="http://csslint.net/">csslint</a>
 		            <a target="_blank" class="widget_list widget2x2" href=" http://www.jslint.com/">jslint</a>
 				</div>
+				<div class="widget_box">
+				    <a target="_blank" class="widget_list widget2x2" href="http://fontawesome.io/">Font Awesome</a>	
+				    <a target="_blank" class="widget_list widget2x2" href="http://microjs.com/">microjs</a>	
+		        </div>
 			</div>
 		</div>
 	</div>
