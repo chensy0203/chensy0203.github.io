@@ -300,6 +300,7 @@
 			<div class="widget_box_list">
 				<div class="widget_box">
 		            <a target="_blank" class="widget_list widget4x2" href="http://fis.baidu.com/">F.I.S</a>
+		            <a target="_blank" class="widget_list widget4x2" href="http://yeoman.io/">yeoman</a>
 				</div>
 			</div>
 		</div>
