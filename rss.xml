@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Tue, 16 Jul 2013 15:41:16 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>前端导航页面面世了</title><link>http://chensy0203.github.com/posts/about-web-site-nav.html</link><description>&lt;div&gt;&lt;p&gt;折腾了一天，终于把 &lt;a class="reference external" href="/stories/web-site-nav.html"&gt;前端导航&lt;/a&gt; 的页面做好了^_^。&lt;/p&gt;
+<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 21 Jul 2013 01:24:07 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello node-webkit</title><link>http://chensy0203.github.com/posts/hello-node-webkit.html</link><description>&lt;div&gt;&lt;div class="section" id="node-webkit"&gt;
+&lt;h2&gt;什么是node-webkit？&lt;/h2&gt;
+&lt;p&gt;node-webkit是一个基于Chromium与Node.js的应用程序运行器，允许开发者使用web技术编写桌面应用程序。它是在英特尔的开源技术中心创建和发展起来的。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;node-webkit有什么特点？&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;可以用HTML5、CSS3、JS和WebGL写应用&lt;/li&gt;
+&lt;li&gt;完全支持Node.js的API以及它的所有第三方模块&lt;/li&gt;
+&lt;li&gt;性能好：Node和WebKit运行在同一个线程内，函数调用简单，对象也在同一个堆上，可以与相引用&lt;/li&gt;
+&lt;li&gt;容易打包和发布应用&lt;/li&gt;
+&lt;li&gt;跨平台运行，兼容Linux、Mac OSX和Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/hello-node-webkit.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>node-webkit</category><guid>http://chensy0203.github.com/posts/hello-node-webkit.html</guid><pubDate>Sat, 20 Jul 2013 22:04:39 GMT</pubDate></item><item><title>前端导航页面面世了</title><link>http://chensy0203.github.com/posts/about-web-site-nav.html</link><description>&lt;div&gt;&lt;p&gt;折腾了一天，终于把 &lt;a class="reference external" href="/stories/web-site-nav.html"&gt;前端导航&lt;/a&gt; 的页面做好了^_^。&lt;/p&gt;
 &lt;p&gt;是win8 metro 风格 ，看起来还行，就是随机配色有时不太好，随机算法太初级了，迟点再优化。&lt;/p&gt;
 &lt;p&gt;然后，只是简单整理了一些内容上去，以后会继续丰富的。&lt;/p&gt;
 &lt;div class="more"&gt;&lt;a href="/posts/about-web-site-nav.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>前端</category><guid>http://chensy0203.github.com/posts/about-web-site-nav.html</guid><pubDate>Fri, 12 Jul 2013 21:34:08 GMT</pubDate></item><item><title>pure中文网站终于安家落户了</title><link>http://chensy0203.github.com/posts/pure-css-zh.html</link><description>&lt;div&gt;&lt;p&gt;断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。&lt;/p&gt;

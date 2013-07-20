@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="zh_cn">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="chensy">
+    <title>hello node-webkit | chensy's blog</title>
+    
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/myrst.css" rel="stylesheet" type="text/css">
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+            <link rel="icon" href="../16x16.png" sizes="16x16">
+    <script src="../assets/js/jquery.js" type="text/javascript"></script>
+
+    
+
+
+
+    
+</head>
+<body>
+<!-- Menubar -->
+<div class="header">
+    <div class="header_box">
+            <h1 class="logo" id="logo"><a href="../">chensy's blog</a>
+            </h1>
+            <ul class="main_nav" id="mainNav">
+                
+                <li><a href="../index.html">首页</a>
+                </li><li><a href="../archive.html">存档</a>
+                </li><li><a href="../stories/about.html">关于</a>
+                </li><li class="rss"><a href="../rss.xml">RSS</a>
+
+            </li></ul>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="content clearfix">
+    <!--Body content-->
+    
+
+    <div class="con_left" id="conLeft">
+        
+    <div class="article_box">
+    	<div class="article_title">
+    		
+    <h3>hello node-webkit</h3>
+
+    	</div>
+	    <div class="entry ">                    
+		    	<div class="section" id="node-webkit">
+<h2>什么是node-webkit？</h2>
+<p>node-webkit是一个基于Chromium与Node.js的应用程序运行器，允许开发者使用web技术编写桌面应用程序。它是在英特尔的开源技术中心创建和发展起来的。</p>
+</div>
+<div class="section" id="id1">
+<h2>node-webkit有什么特点？</h2>
+<ul class="simple">
+<li>可以用HTML5、CSS3、JS和WebGL写应用</li>
+<li>完全支持Node.js的API以及它的所有第三方模块</li>
+<li>性能好：Node和WebKit运行在同一个线程内，函数调用简单，对象也在同一个堆上，可以与相引用</li>
+<li>容易打包和发布应用</li>
+<li>跨平台运行，兼容Linux、Mac OSX和Windows</li>
+</ul>
+<!-- TEASER_END -->
+<p>以上是官方的介绍，接下来开始动手吧！</p>
+</div>
+<div class="section" id="win7">
+<h2>准备环境（我的是win7）</h2>
+<p>去 <a class="reference external" href="https://github.com/rogerwang/node-webkit">https://github.com/rogerwang/node-webkit</a> 下载对应系统的node-webkit，然后找个地方解压放好，最后再配置下环境变量就可以了。</p>
+<ul class="simple">
+<li>首先创建一个文件夹做为应用的根路径，如：hello</li>
+<li>接着在hello文件夹下，创建一个html的文件：index.html</li>
+</ul>
+<pre class="code html literal-block">
+<span class="ln"> 1 </span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="ln"> 2 </span><span class="nt">&lt;html&gt;</span>
+<span class="ln"> 3 </span><span class="nt">&lt;head&gt;</span>
+<span class="ln"> 4 </span><span class="nt">&lt;title&gt;</span>Hello World!<span class="nt">&lt;/title&gt;</span>
+<span class="ln"> 5 </span><span class="nt">&lt;/head&gt;</span>
+<span class="ln"> 6 </span><span class="nt">&lt;body&gt;</span>
+<span class="ln"> 7 </span><span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span>
+<span class="ln"> 8 </span>We are using node.js <span class="nt">&lt;script&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">version</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>
+<span class="ln"> 9 </span><span class="nt">&lt;/body&gt;</span>
+<span class="ln">10 </span><span class="nt">&lt;/html&gt;</span>
+</pre>
+<ul class="simple">
+<li>然后创建配置文件：package.json</li>
+</ul>
+<pre class="code json literal-block">
+<span class="ln">1 </span><span class="p">{</span>
+<span class="ln">2 </span>  <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"nw-demo"</span><span class="p">,</span>
+<span class="ln">3 </span>  <span class="nt">"main"</span><span class="p">:</span> <span class="s2">"index.html"</span>
+<span class="ln">4 </span><span class="p">}</span>
+</pre>
+<p>最后在hello所在的目录，执行 nw hello 就可以看到以下的界面了</p>
+<img src="http://ww3.sinaimg.cn/mw690/6c5bdf76jw1e6tp0kwrmbj20mo0ermxr.jpg" width="600" height="350" style="width:600px;height=375px"><p>接下来，再试下怎么调用本地的API</p>
+<ul class="simple">
+<li>index.html
+主页HTML代码，主要是添加了一些测试API的按钮</li>
+</ul>
+<pre class="code html literal-block">
+<span class="ln"> 1 </span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="ln"> 2 </span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>
+<span class="ln"> 3 </span><span class="nt">&lt;head&gt;</span>
+<span class="ln"> 4 </span><span class="nt">&lt;title&gt;</span>Hello World!<span class="nt">&lt;/title&gt;</span>
+<span class="ln"> 5 </span><span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+<span class="ln"> 6 </span><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/native-api.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="ln"> 7 </span><span class="nt">&lt;/head&gt;</span>
+<span class="ln"> 8 </span><span class="nt">&lt;body&gt;</span>
+<span class="ln"> 9 </span><span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span>
+<span class="ln">10 </span>        We are using node.js <span class="nt">&lt;script&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">version</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>
+<span class="ln">11 </span><span class="nt">&lt;section&gt;</span>
+<span class="ln">12 </span>        <span class="nt">&lt;h2&gt;</span>Native api<span class="nt">&lt;/h2&gt;</span>
+<span class="ln">13 </span>        <span class="nt">&lt;p&gt;</span>
+<span class="ln">14 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.minimize()"</span><span class="nt">&gt;</span>
+<span class="ln">15 </span>                        最小化窗口
+<span class="ln">16 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">17 </span>        <span class="nt">&lt;/p&gt;</span>
+<span class="ln">18 </span>        <span class="nt">&lt;p&gt;</span>
+<span class="ln">19 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.listenMinimize()"</span><span class="nt">&gt;</span>
+<span class="ln">20 </span>                        监听最小化窗口事件
+<span class="ln">21 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">22 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.cancelMinimize()"</span><span class="nt">&gt;</span>
+<span class="ln">23 </span>                        取消最小化窗口事件的监听
+<span class="ln">24 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">25 </span>        <span class="nt">&lt;/p&gt;</span>
+<span class="ln">26 </span>        <span class="nt">&lt;p&gt;</span>
+<span class="ln">27 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.listenClose()"</span><span class="nt">&gt;</span>
+<span class="ln">28 </span>                        监听关闭窗口事件
+<span class="ln">29 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">30 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.cancelClose()"</span><span class="nt">&gt;</span>
+<span class="ln">31 </span>                        取消关闭窗口事件的监听
+<span class="ln">32 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">33 </span>        <span class="nt">&lt;/p&gt;</span>
+<span class="ln">34 </span>        <span class="nt">&lt;p&gt;</span>
+<span class="ln">35 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.newWin()"</span><span class="nt">&gt;</span>
+<span class="ln">36 </span>                        打开新窗口
+<span class="ln">37 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">38 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.closeWin()"</span><span class="nt">&gt;</span>
+<span class="ln">39 </span>                        关闭当前窗口
+<span class="ln">40 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">41 </span>        <span class="nt">&lt;/p&gt;</span>
+<span class="ln">42 </span>        <span class="nt">&lt;p&gt;</span>
+<span class="ln">43 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.createContextMenu()"</span><span class="nt">&gt;</span>
+<span class="ln">44 </span>                        创建右键菜单
+<span class="ln">45 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">46 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.createTrayMenu()"</span><span class="nt">&gt;</span>
+<span class="ln">47 </span>                        创建系统托盘
+<span class="ln">48 </span>                <span class="nt">&lt;/button&gt;</span>
+<span class="ln">49 </span>        <span class="nt">&lt;/p&gt;</span>
+<span class="ln">50 </span>        <span class="nt">&lt;p&gt;</span>
+<span class="ln">51 </span>                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"copyText"</span> <span class="na">value=</span><span class="s">"修改这里的文本"</span><span class="nt">/&gt;</span>
+<span class="ln">52 </span>                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">onclick=</span><span class="s">"navite.copyText()"</span><span class="nt">&gt;</span>复制<span class="nt">&lt;/button&gt;</span>
+<span class="ln">53 </span>        <span class="nt">&lt;/p&gt;</span>
+<span class="ln">54 </span><span class="nt">&lt;/section&gt;</span>
+<span class="ln">55 </span><span class="nt">&lt;/body&gt;</span>
+<span class="ln">56 </span><span class="nt">&lt;/html&gt;</span>
+</pre>
+<ul class="simple">
+<li>package.json
+配置文件，主要增加了详细配置窗口的一些属性</li>
+</ul>
+<pre class="code json literal-block">
+<span class="ln"> 1 </span><span class="p">{</span>
+<span class="ln"> 2 </span>  <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"nw-demo"</span><span class="p">,</span>
+<span class="ln"> 3 </span>  <span class="nt">"main"</span><span class="p">:</span> <span class="s2">"index.html"</span><span class="p">,</span>
+<span class="ln"> 4 </span>  <span class="nt">"description"</span><span class="p">:</span><span class="s2">"demo app of node-webkit"</span><span class="p">,</span>
+<span class="ln"> 5 </span>  <span class="nt">"version"</span><span class="p">:</span><span class="s2">"0.1.0"</span><span class="p">,</span>
+<span class="ln"> 6 </span>  <span class="nt">"keywords"</span><span class="p">:[</span><span class="s2">"demo"</span><span class="p">,</span><span class="s2">"node-webkit"</span><span class="p">],</span>
+<span class="ln"> 7 </span>  <span class="nt">"window"</span><span class="p">:{</span>
+<span class="ln"> 8 </span>                <span class="nt">"icon"</span><span class="p">:</span><span class="s2">"16x16.png"</span><span class="p">,</span>
+<span class="ln"> 9 </span>                <span class="nt">"toolbar"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="ln">10 </span>                <span class="nt">"width"</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span>
+<span class="ln">11 </span>                <span class="nt">"height"</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span>
+<span class="ln">12 </span>                <span class="nt">"position"</span><span class="p">:</span><span class="s2">"mouse"</span><span class="p">,</span>
+<span class="ln">13 </span>                <span class="nt">"min_width"</span><span class="p">:</span><span class="mi">400</span><span class="p">,</span>
+<span class="ln">14 </span>                <span class="nt">"min_height"</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+<span class="ln">15 </span>                <span class="nt">"max_width"</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span>
+<span class="ln">16 </span>                <span class="nt">"max_height"</span><span class="p">:</span><span class="mi">600</span><span class="p">,</span>
+<span class="ln">17 </span>                <span class="nt">"resizable"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="ln">18 </span>                <span class="nt">"always-on-top"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="ln">19 </span>                <span class="nt">"fullscreen"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="ln">20 </span>                <span class="nt">"show"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="ln">21 </span>                <span class="nt">"frame"</span><span class="p">:</span><span class="kc">true</span><span class="err">//true表示有框窗口</span>
+<span class="ln">22 </span>        <span class="p">},</span>
+<span class="ln">23 </span>  <span class="nt">"webkit"</span><span class="p">:{</span>
+<span class="ln">24 </span>                <span class="nt">"plugin"</span><span class="p">:</span><span class="kc">true</span>
+<span class="ln">25 </span>  <span class="p">}</span>
+<span class="ln">26 </span><span class="p">}</span>
+</pre>
+<ul class="simple">
+<li>native-api.js
+主要是利用本地API定义了一些函数，给页面调用</li>
+</ul>
+<pre class="code javascript literal-block">
+<span class="ln"> 1 </span><span class="kd">var</span> <span class="nx">gui</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'nw.gui'</span><span class="p">);</span>
+<span class="ln"> 2 </span><span class="kd">var</span> <span class="nx">win</span> <span class="o">=</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">Window</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="p">);</span>
+<span class="ln"> 3 </span><span class="kd">var</span> <span class="nx">tray</span><span class="p">;</span>
+<span class="ln"> 4 </span><span class="kd">var</span> <span class="nx">navite</span><span class="o">=</span><span class="p">{</span>
+<span class="ln"> 5 </span>        <span class="c1">//窗口最小化
+</span><span class="ln"> 6 </span><span class="c1"></span>        <span class="nx">minimize</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln"> 7 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">minimize</span><span class="p">(</span><span class="p">);</span>
+<span class="ln"> 8 </span>        <span class="p">},</span>
+<span class="ln"> 9 </span>        <span class="c1">//监听窗口最小化事件
+</span><span class="ln">10 </span><span class="c1"></span>        <span class="nx">listenMinimize</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">11 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'minimize'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">12 </span>                        <span class="nx">alert</span><span class="p">(</span><span class="s1">'窗口被最小化'</span><span class="p">);</span>
+<span class="ln">13 </span>                <span class="p">});</span>
+<span class="ln">14 </span>        <span class="p">},</span>
+<span class="ln">15 </span>        <span class="c1">//监听窗口关闭事件
+</span><span class="ln">16 </span><span class="c1"></span>        <span class="nx">listenClose</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">17 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'close'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">18 </span>                        <span class="nx">alert</span><span class="p">(</span><span class="s1">'窗口被关闭'</span><span class="p">);</span>
+<span class="ln">19 </span>                <span class="p">});</span>
+<span class="ln">20 </span>        <span class="p">},</span>
+<span class="ln">21 </span>        <span class="c1">//取消窗口关闭事件的监听
+</span><span class="ln">22 </span><span class="c1"></span>        <span class="nx">cancelClose</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">23 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">(</span><span class="s1">'close'</span><span class="p">);</span>
+<span class="ln">24 </span>        <span class="p">},</span>
+<span class="ln">25 </span>        <span class="c1">//取消窗口最小化事件的监听
+</span><span class="ln">26 </span><span class="c1"></span>        <span class="nx">cancelMinimize</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">27 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">(</span><span class="s1">'minimize'</span><span class="p">);</span>
+<span class="ln">28 </span>        <span class="p">},</span>
+<span class="ln">29 </span>        <span class="c1">//创建新的窗口
+</span><span class="ln">30 </span><span class="c1"></span>        <span class="nx">newWin</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">31 </span>                <span class="nx">gui</span><span class="p">.</span><span class="nx">Window</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'http://chensy0203.github.com'</span><span class="p">));</span>
+<span class="ln">32 </span>        <span class="p">},</span>
+<span class="ln">33 </span>        <span class="c1">//关闭当前窗口
+</span><span class="ln">34 </span><span class="c1"></span>        <span class="nx">closeWin</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">35 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="p">);</span>
+<span class="ln">36 </span>        <span class="p">},</span>
+<span class="ln">37 </span>        <span class="c1">//创建右键菜单
+</span><span class="ln">38 </span><span class="c1"></span>        <span class="nx">createContextMenu</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">39 </span>                <span class="kd">var</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">Menu</span><span class="p">(</span><span class="p">);</span>
+<span class="ln">40 </span>                <span class="nx">menu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="s1">'Item A'</span><span class="p">}));</span>
+<span class="ln">41 </span>                <span class="nx">menu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="s1">'Item B'</span><span class="p">}));</span>
+<span class="ln">42 </span>                <span class="nx">menu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">type</span><span class="o">:</span><span class="s1">'separator'</span><span class="p">}));</span>
+<span class="ln">43 </span>                <span class="nx">menu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="s1">'Item C'</span><span class="p">}));</span>
+<span class="ln">44 </span>                <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'contextmenu'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">){</span>
+<span class="ln">45 </span>                        <span class="nx">ev</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">(</span><span class="p">);</span>
+<span class="ln">46 </span>                        <span class="nx">menu</span><span class="p">.</span><span class="nx">popup</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="nx">ev</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+<span class="ln">47 </span>                        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="ln">48 </span>                <span class="p">});</span>
+<span class="ln">49 </span>        <span class="p">},</span>
+<span class="ln">50 </span>        <span class="c1">//创建系统托盘
+</span><span class="ln">51 </span><span class="c1"></span>        <span class="nx">createTrayMenu</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">52 </span>                <span class="kd">var</span> <span class="nx">trayMenu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">Menu</span><span class="p">(</span><span class="p">);</span>
+<span class="ln">53 </span>                <span class="nx">trayMenu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="s1">'test1'</span><span class="p">}));</span>
+<span class="ln">54 </span>                <span class="nx">trayMenu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="s1">'test2'</span><span class="p">}));</span>
+<span class="ln">55 </span>                <span class="nx">trayMenu</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">MenuItem</span><span class="p">(</span><span class="p">{</span><span class="nx">label</span><span class="o">:</span><span class="s1">'test3'</span><span class="p">}));</span>
+<span class="ln">56 </span>                <span class="nx">win</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'minimize'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">57 </span>                        <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="p">);</span><span class="c1">//隐藏窗口
+</span><span class="ln">58 </span><span class="c1"></span>                        <span class="nx">tray</span><span class="o">=</span><span class="k">new</span> <span class="nx">gui</span><span class="p">.</span><span class="nx">Tray</span><span class="p">(</span><span class="p">{</span><span class="nx">title</span><span class="o">:</span><span class="s1">'系统托盘'</span><span class="p">,</span><span class="nx">icon</span><span class="o">:</span><span class="s1">'16x16.png'</span><span class="p">});</span>
+<span class="ln">59 </span>                        <span class="nx">tray</span><span class="p">.</span><span class="nx">menu</span><span class="o">=</span><span class="nx">trayMenu</span><span class="p">;</span>
+<span class="ln">60 </span>                        <span class="nx">tray</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">61 </span>                                <span class="k">this</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="p">);</span><span class="c1">//删除系统托盘
+</span><span class="ln">62 </span><span class="c1"></span>                                <span class="nx">tray</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
+<span class="ln">63 </span>                                <span class="nx">win</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="p">);</span><span class="c1">//显示窗口
+</span><span class="ln">64 </span><span class="c1"></span>                        <span class="p">});</span>
+<span class="ln">65 </span>                <span class="p">});</span>
+<span class="ln">66 </span>        <span class="p">},</span>
+<span class="ln">67 </span>        <span class="nx">copyText</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="p">){</span>
+<span class="ln">68 </span>
+<span class="ln">69 </span>        <span class="p">}</span>
+<span class="ln">70 </span><span class="p">}</span>
+</pre>
+<ul class="simple">
+<li>效果图
+点击不同的按钮有不同的效果</li>
+</ul>
+<img src="http://ww3.sinaimg.cn/mw690/6c5bdf76jw1e6tohv8bbjj20ml0ev0tx.jpg" width="600" height="350" style="width:600px;height=375px"><p>暂时就到这里吧，迟点再学习下官方的demo。</p>
+</div>
+<div class="section" id="id2">
+<h2>官方的一些资源：</h2>
+<ul class="simple">
+<li>demo：<a class="reference external" href="https://github.com/zcbenz/nw-sample-apps">https://github.com/zcbenz/nw-sample-apps</a></li>
+<li>应用：<a class="reference external" href="https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit">https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit</a></li>
+<li>怎么运行：<a class="reference external" href="https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps">https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps</a></li>
+<li>怎么打包发布：<a class="reference external" href="https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps">https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps</a></li>
+<li>怎么使用Node模块：<a class="reference external" href="https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules">https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules</a></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>参考：</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/rogerwang/node-webkit">Node webkit官网</a></li>
+<li><a class="reference external" href="http://oklai.name/2013/04/%E8%BF%99%E5%B9%B4%E5%A4%B4%EF%BC%8C%E4%BD%A0%E5%8F%AA%E9%9C%80%E8%A6%81%E6%87%82node-webkit/">这年头，你只需要懂Node webkit</a></li>
+</ul>
+</div>  
+        </div>
+            <div class="source">
+               <a href="hello-node-webkit.txt" id="sourcelink">源代码</a>
+            </div>
+        <div class="art_copy">
+            <p>原载于：chensy's blog</p>
+            <p>本文链接：http://chensy0203.github.com/posts/hello-node-webkit.html</p>
+            <p>如需转载请以链接形式注明原载或原文地址。</p>      
+        </div>
+	    <ul class="article_info">
+             <!--
+             <li class="cate"></li>
+             <li class="vote"></li>
+             -->
+             <li class="tag">
+                <ul class="tags_list">
+                    <li>
+                        <a href="../categories/hello.html" rel="tag">hello</a>
+                    </li>
+                    <li>
+                        <a href="../categories/node-webkit.html" rel="tag">node-webkit</a>
+                    </li>
+                </ul>
+             </li>
+             <li class="date">2013-07-20 22:04</li>
+        </ul>
+    </div>
+
+        
+    <!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread" data-thread-key="1374329079.0" data-title="&lt;bound method Post.title of &lt;nikola.post.Post object at 0x00000000046E5F60&gt;&gt;" data-author-key="chensy"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chensy0203"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- Duoshuo Comment END -->
+    <span id="post-comments"></span>
+
+
+    </div>
+    <div class="con_right">
+        <div class="about_box">
+            <a href="../stories/about.html" class="avatar_box"><img src="../100x100.png" width="100" height="100" alt="头像"></a>
+            <div class="info">
+                <h3>chensy</h3>
+                <p>Java Web开发工程师，前端爱好者，技术宅，现居广州，创业中</p>
+            </div>
+        </div>
+        
+        <div class="side_box">
+            微博：<a href="http://weibo.com/nc80" target="_blank">@chensy0203</a>
+        </div>
+        <div class="side_box">
+            facebook：<a href="https://www.facebook.com/chensy0203" target="_blank">chensy0203</a>
+        </div>
+        <ul class="cate_box">
+            <li class="categories">我的书架
+                <ul>
+                   <li class="cat-item ">
+                        <a href="../stories/translation.html" title="翻译也是一种学习的过程" target="_blank">翻译也是一种学习</a>
+                   </li>
+                   <li class="cat-item ">
+                        <a href="../stories/bookshelf.html" title="书中自有黄金屋" target="_blank">书中自有黄金屋</a>
+                   </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <ul class="cate_box">
+            <li class="categories"><h2>前端导航</h2>
+                <ul>
+                    <li class="cat-item "><a href="../stories/web-site-nav.html#front-end-blog" target="_blank">那些博客</a></li>
+                    <li class="cat-item "><a href="../stories/web-site-nav.html#front-end-tool" target="_blank">那些工具</a></li>
+                    <li class="cat-item "><a href="../stories/web-site-nav.html#those-css" target="_blank">那些CSS</a></li>
+                    <li class="cat-item "><a href="../stories/web-site-nav.html#those-js" target="_blank">那些JS</a></li>
+                    <li class="cat-item "><a href="../stories/web-site-nav.html#front-end-solution" target="_blank">那些解决方案</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="cate_box" id="cateBox">
+            <li class="categories">文章分类
+                <ul>
+                   <li class="cat-item "><a href="javascript:void(0)" title="查看下的所有文章"><span class="num">0</span>加载中……</a>
+                   </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="links_box" id="linksBox">
+            <li id="linkcat-2" class="linkcat"><h2>友情链接</h2>
+                <ul class="xoxo blogroll">
+                    <li><a href="http://shuyaochen.diandian.com/" target="_blank">shuyaochen</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--End of body content-->
+</div>
+<div class="footer">
+    Contents © 2013         <a href="mailto:chensy0203@163.com">chensy</a> - Powered by         <a href="http://nikola.ralsina.com.ar">Nikola</a>
+</div>
+<div id="goTop" class="go_top" title="返回顶部"></div>
+
+
+    
+ <script>
+        $(function(){
+            //文章分类
+            $.getJSON("/assets/js/tag_cloud_data.json", function( data ){
+                var items=[];
+                $.each(data,function(name,numAndUrl){
+                    var liTmpl='<li class="cat-item "><a href="$url" title="查看 $title 下的所有文章"><span class="num">$num</span>$tag</a></li>';
+                    liTmpl = liTmpl.replace("$url",numAndUrl[1]).replace("$num",numAndUrl[0]).replace("$title",name).replace("$tag",name);
+                    items.push(liTmpl);
+                });
+                $("#cateBox .categories ul").html(items.join(''));
+            });
+        });
+  </script>
+
+    
+    <script>
+        $(function(){
+            //回到顶部
+            $(window).scroll(function(){  
+                    var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+                    if( scrollt >200 ){  //判断滚动后高度超过200px,就显示  
+                        $("#goTop").fadeIn(400); //淡出     
+                    }else{      
+                        $("#goTop").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
+                    }
+            });
+
+            $("#goTop").click(function(){ 
+                    $("html,body").animate({scrollTop:"0px"},500);
+            });
+            //滚到评论
+            var hash = window.location.hash;
+            if(hash&&$(hash).length==1){
+                $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                        },1000);
+            }
+
+        });
+    </script>
+
+    
+
+
+
+    <!-- Social buttons -->
+    
+    <!-- End of social buttons -->
+
+
+<script src="http://s85.cnzz.com/stat.php?id=5105855&amp;web_id=5105855&amp;show=pic" language="JavaScript"></script>
+
+</body>
+</html>

@@ -108,6 +108,7 @@
 					<a target="_blank" title="还有一个Web前端实验室" class="widget_list widget4x2" href="http://blog.doyoe.com/">CSS探索之旅</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://blog.mycolorway.com/">彩程设计</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://www.cssha.com/">前端手记</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://oklai.name/">oklai's blog</a>
 			    </div>
 			</div>
 		</div>

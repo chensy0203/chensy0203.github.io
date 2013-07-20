@@ -1,0 +1,282 @@
+.. slug: hello-node-webkit
+.. description: 
+.. tags: hello,node-webkit 
+.. date: 2013/07/20 22:04:39
+.. title: hello node-webkit
+.. link: 
+.. comment: True
+
+什么是node-webkit？
+===================
+
+node-webkit是一个基于Chromium与Node.js的应用程序运行器，允许开发者使用web技术编写桌面应用程序。它是在英特尔的开源技术中心创建和发展起来的。
+
+node-webkit有什么特点？
+=======================
+
+* 可以用HTML5、CSS3、JS和WebGL写应用
+
+* 完全支持Node.js的API以及它的所有第三方模块
+
+* 性能好：Node和WebKit运行在同一个线程内，函数调用简单，对象也在同一个堆上，可以与相引用
+
+* 容易打包和发布应用
+
+* 跨平台运行，兼容Linux、Mac OSX和Windows
+
+.. TEASER_END
+
+以上是官方的介绍，接下来开始动手吧！
+
+
+准备环境（我的是win7）
+======================
+
+去 https://github.com/rogerwang/node-webkit 下载对应系统的node-webkit，然后找个地方解压放好，最后再配置下环境变量就可以了。
+
+* 首先创建一个文件夹做为应用的根路径，如：hello
+
+* 接着在hello文件夹下，创建一个html的文件：index.html
+
+..	code-block:: html
+	:number-lines: 1
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<title>Hello World!</title>
+	</head>
+	<body>
+	<h1>Hello World!</h1>
+	We are using node.js <script>document.write(process.version)</script>
+	</body>
+	</html>
+
+* 然后创建配置文件：package.json
+
+..	code-block:: json
+	:number-lines: 1
+
+	{
+	  "name": "nw-demo",
+	  "main": "index.html"
+	}
+
+
+最后在hello所在的目录，执行 nw hello 就可以看到以下的界面了
+
+
+..	raw:: html
+
+	<img src="http://ww3.sinaimg.cn/mw690/6c5bdf76jw1e6tp0kwrmbj20mo0ermxr.jpg" width="600" height="350" style="width:600px;height=375px"/>
+
+
+接下来，再试下怎么调用本地的API
+
+
+* index.html
+  主页HTML代码，主要是添加了一些测试API的按钮
+
+..	code-block:: html
+	:number-lines: 1
+
+	<!DOCTYPE html>
+	<html lang="zh-CN">
+	<head>
+	<title>Hello World!</title>
+	<meta charset="UTF-8" />
+	<script type="text/javascript" src="js/native-api.js"></script>
+	</head>
+	<body>
+	<h1>Hello World!</h1>
+		We are using node.js <script>document.write(process.version)</script>
+	<section>
+		<h2>Native api</h2>
+		<p>
+			<button type="button" value="" onclick="navite.minimize()">
+				最小化窗口
+			</button>
+		</p>
+		<p>
+			<button type="button" value="" onclick="navite.listenMinimize()">
+				监听最小化窗口事件
+			</button>
+			<button type="button" value="" onclick="navite.cancelMinimize()">
+				取消最小化窗口事件的监听
+			</button>
+		</p>
+		<p>
+			<button type="button" value="" onclick="navite.listenClose()">
+				监听关闭窗口事件
+			</button>
+			<button type="button" value="" onclick="navite.cancelClose()">
+				取消关闭窗口事件的监听
+			</button>
+		</p>
+		<p>
+			<button type="button" value="" onclick="navite.newWin()">
+				打开新窗口
+			</button>
+			<button type="button" value="" onclick="navite.closeWin()">
+				关闭当前窗口
+			</button>
+		</p>
+		<p>
+			<button type="button" value="" onclick="navite.createContextMenu()">
+				创建右键菜单
+			</button>
+			<button type="button" value="" onclick="navite.createTrayMenu()">
+				创建系统托盘
+			</button>
+		</p>
+		<p>
+			<input type="text" id="copyText" value="修改这里的文本"/>
+			<button type="button" value="" onclick="navite.copyText()">复制</button>	
+		</p>
+	</section>
+	</body>
+	</html>
+
+
+* package.json
+  配置文件，主要增加了详细配置窗口的一些属性
+
+..	code-block:: json
+	:number-lines: 1
+
+	{
+	  "name": "nw-demo",
+	  "main": "index.html",
+	  "description":"demo app of node-webkit",
+	  "version":"0.1.0",
+	  "keywords":["demo","node-webkit"],
+	  "window":{
+	  		"icon":"16x16.png",
+	  		"toolbar":true,
+	  		"width":800,
+	  		"height":500,
+	  		"position":"mouse",
+	  		"min_width":400,
+	  		"min_height":200,
+	  		"max_width":800,
+	  		"max_height":600,
+	  		"resizable":false,
+	  		"always-on-top":false,
+	  		"fullscreen":false,
+	  		"show":true,
+	  		"frame":true//true表示有框窗口
+	  	},
+	  "webkit":{
+	  		"plugin":true
+	  }
+	}
+
+
+* native-api.js
+  主要是利用本地API定义了一些函数，给页面调用
+
+..	code-block:: javascript
+	:number-lines: 1
+
+	var gui = require('nw.gui');
+	var win = gui.Window.get();
+	var tray;
+	var navite={
+		//窗口最小化
+		minimize:function(){
+			win.minimize();
+		},
+		//监听窗口最小化事件
+		listenMinimize:function(){
+			win.on('minimize',function(){
+				alert('窗口被最小化');
+			});
+		},
+		//监听窗口关闭事件
+		listenClose:function(){
+			win.on('close',function(){
+				alert('窗口被关闭');
+			});
+		},
+		//取消窗口关闭事件的监听
+		cancelClose:function(){
+			win.removeAllListeners('close');
+		},
+		//取消窗口最小化事件的监听
+		cancelMinimize:function(){
+			win.removeAllListeners('minimize');
+		},
+		//创建新的窗口
+		newWin:function(){
+			gui.Window.get(window.open('http://chensy0203.github.com'));
+		},
+		//关闭当前窗口
+		closeWin:function(){
+			win.close();
+		},
+		//创建右键菜单
+		createContextMenu:function(){
+			var menu = new gui.Menu();
+			menu.append(new gui.MenuItem({label:'Item A'}));
+			menu.append(new gui.MenuItem({label:'Item B'}));
+			menu.append(new gui.MenuItem({type:'separator'}));
+			menu.append(new gui.MenuItem({label:'Item C'}));
+			document.body.addEventListener('contextmenu',function(ev){
+				ev.preventDefault();
+				menu.popup(ev.x,ev.y);
+				return false;
+			});
+		},
+		//创建系统托盘
+		createTrayMenu:function(){
+			var trayMenu = new gui.Menu();
+			trayMenu.append(new gui.MenuItem({label:'test1'}));
+			trayMenu.append(new gui.MenuItem({label:'test2'}));
+			trayMenu.append(new gui.MenuItem({label:'test3'}));
+			win.on('minimize',function(){
+				this.hide();//隐藏窗口
+				tray=new gui.Tray({title:'系统托盘',icon:'16x16.png'});
+				tray.menu=trayMenu;
+				tray.on('click',function(){
+					this.remove();//删除系统托盘
+					tray=null;
+					win.show();//显示窗口
+				});
+			});
+		},
+		copyText:function(){
+			
+		}
+	}
+
+
+* 效果图
+  点击不同的按钮有不同的效果
+
+..	raw:: html
+
+	<img src="http://ww3.sinaimg.cn/mw690/6c5bdf76jw1e6tohv8bbjj20ml0ev0tx.jpg" width="600" height="350" style="width:600px;height=375px"/>
+
+暂时就到这里吧，迟点再学习下官方的demo。
+
+
+官方的一些资源：
+================
+
+* demo：https://github.com/zcbenz/nw-sample-apps
+
+* 应用：https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit
+
+* 怎么运行：https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps
+
+* 怎么打包发布：https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps
+
+* 怎么使用Node模块：https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules
+
+
+参考：
+======
+
+* `Node webkit官网 <https://github.com/rogerwang/node-webkit>`_
+
+* `这年头，你只需要懂Node webkit <http://oklai.name/2013/04/%E8%BF%99%E5%B9%B4%E5%A4%B4%EF%BC%8C%E4%BD%A0%E5%8F%AA%E9%9C%80%E8%A6%81%E6%87%82node-webkit/>`_ 

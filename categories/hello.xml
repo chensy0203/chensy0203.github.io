@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog (hello)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Fri, 12 Jul 2013 22:38:09 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
+<rss version="2.0"><channel><title>chensy's blog (hello)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 21 Jul 2013 01:24:06 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello node-webkit</title><link>http://chensy0203.github.com/posts/hello-node-webkit.html</link><description>&lt;div&gt;&lt;div class="section" id="node-webkit"&gt;
+&lt;h2&gt;什么是node-webkit？&lt;/h2&gt;
+&lt;p&gt;node-webkit是一个基于Chromium与Node.js的应用程序运行器，允许开发者使用web技术编写桌面应用程序。它是在英特尔的开源技术中心创建和发展起来的。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;node-webkit有什么特点？&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;可以用HTML5、CSS3、JS和WebGL写应用&lt;/li&gt;
+&lt;li&gt;完全支持Node.js的API以及它的所有第三方模块&lt;/li&gt;
+&lt;li&gt;性能好：Node和WebKit运行在同一个线程内，函数调用简单，对象也在同一个堆上，可以与相引用&lt;/li&gt;
+&lt;li&gt;容易打包和发布应用&lt;/li&gt;
+&lt;li&gt;跨平台运行，兼容Linux、Mac OSX和Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/hello-node-webkit.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>node-webkit</category><guid>http://chensy0203.github.com/posts/hello-node-webkit.html</guid><pubDate>Sat, 20 Jul 2013 22:04:39 GMT</pubDate></item><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#overview"&gt;概述&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#philosophy"&gt;宗旨&lt;/a&gt;&lt;/li&gt;
