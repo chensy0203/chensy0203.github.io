@@ -29,12 +29,12 @@
 			<div class="widget_box_list">
 				<div class="widget_box">
 		            <a target="_blank" class="widget_list widget2x2" href="http://fed.renren.com/">人人网FED</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://mux.baidu.com/" title="">百度MUX</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://wsd.tencent.com/" title="">腾讯WSD</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://mux.baidu.com/" >百度MUX</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://wsd.tencent.com/" >腾讯WSD</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://isux.tencent.com/">腾讯ISUX</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://cdc.tencent.com/">腾讯CDC</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://ued.taobao.com/blog"
-		               title="">淘宝UED</a>
+		               >淘宝UED</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://ued.alipay.com/">支付宝UED</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://www.aliued.cn/">阿里爸爸UED</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://ued.alimama.com/">阿里妈妈UED</a>
@@ -49,7 +49,7 @@
 					<a target="_blank" class="widget_list widget2x2" href="http://cued.xunlei.com/">迅雷CUED</a>
 				</div>
 				<div class="widget_box">
-		            <a target="_blank" class="widget_list widget2x2" href="http://www.alloyteam.com/" title="">AlloyTeam</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.alloyteam.com/" >AlloyTeam</a>
 					<a target="_blank" class="widget_list widget2x2" href="http://www.75team.com/">奇舞团</a>
 					<a target="_blank" class="widget_list widget2x2" href="http://julying.com/blog/">王子墨</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://sentsin.com/">贤心博客</a>
@@ -57,7 +57,7 @@
 					<a target="_blank" class="widget_list widget2x2" href="http://stylechen.com/">雨夜带刀</a>
 		            <a target="_blank" class="widget_list widget4x2" href="http://www.zhangxinxu.com/wordpress/">张鑫旭-鑫空间鑫生活</a>
 			        <a target="_blank" class="widget_list widget2x2" href="http://uicss.cn/">CK'S blog</a>
-		          	<a target="_blank" class="widget_list widget4x2" href="http://bonsaiden.github.io/JavaScript-Garden/zh/" title="">JavaScript 秘密花园</a>
+		          	<a target="_blank" class="widget_list widget4x2" href="http://bonsaiden.github.io/JavaScript-Garden/zh/" >JavaScript 秘密花园</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://www.cnblogs.com/rubylouvre/">司徒正美</a>
 			        <a target="_blank" class="widget_list widget2x2" href="http://js8.in/">三水清</a>
 			    	<a target="_blank" class="widget_list widget4x2" href="http://www.ruanyifeng.com/blog/it/">阮一峰的网络日志</a>
@@ -68,7 +68,7 @@
 			        <a target="_blank" class="widget_list widget4x2" href="http://www.welefen.com/">welefen的随笔</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://dailyjs.com/">dailyjs</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://www.csser.com/">csser</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://www.gbin1.com/" title="">GB</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.gbin1.com/" >GB</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://blog.bingo929.com/">彬Go</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://jiongks.name/">勾三股四</a>
 		            <a target="_blank" class="widget_list widget2x2" href="http://i.wanz.im/">丸子の部落</a>
@@ -124,57 +124,81 @@
 		</div>
 		<div class="article_inner_box">
 			<div class="widget_box_list">
-				<div class="widget_box">
-					<a target="_blank" class="widget_list widget2x2" href="http://cssload.net/">CSS loading生成</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://preloaders.net/en/circular" title="">gif loading生成</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://layerstyles.org/builder.html">背景层设计</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://lea.verou.me/css3patterns/">CSS3背景</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://gradients.glrzad.com/">css3渐变颜色生成</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://css3please.com/">css3please</a>
+		        <div class="widget_box" title="图片工具">
+		          	<a target="_blank" class="widget_list widget2x2" href="http://spriteme.org/" title="该工具以一种不同的方式来创建CSS sprite。这是一个书签，可以检测你网站中的图像，并相应地进行CSS sprite">css sprite工具</a>
+		          	<a target="_blank" class="widget_list widget2x2" href="http://spritepad.wearekiss.com/" title="一个快速、用户友好的在线CSS sprite生成器，支持图像拖拽，并可以生成你需要的CSS代码">SpritePad</a>
+		            <a target="_blank" title="图标工具：简单转换不超过150K的图片" class="widget_list widget2x2" href="http://tools.dynamicdrive.com/favicon/">favicon图标生成</a>
+					<a target="_blank" title="图标工具：简单转换不超过1M的图片" class="widget_list widget2x2" href="http://www.damotou.com/">ICON图标转换</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://iconvau.lt/" title="很酷的一个字体图标生成工具">字体图标生成</a>
+				    <a target="_blank" title="很酷很齐全的字体图标" class="widget_list widget2x2" href="http://fontawesome.io/">Font Awesome</a>
+		            <a target="_blank" class="widget_list widget2x2" href="http://preloaders.net/en/circular" title="定制各种效果的loading图片">gif loading生成</a>
+					<a target="_blank" title="yahoo的一个在线图片压缩工具" class="widget_list widget2x2" href="http://www.smushit.com/ysmush.it/">无损压缩图片</a>
 
-		            <a target="_blank" class="widget_list widget2x2" href="http://tools.dynamicdrive.com/favicon/">favicon图标生成</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://www.smushit.com/ysmush.it/">无损压缩图片</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://www.damotou.com/">ICON图标转换</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://iconvau.lt/" title="">字体图标生成</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://spriteme.org/" title="很不错的一款css sprite工具，很强大">css sprite工具</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://grid.mindplay.dk/#[[0,0,0,0,0,0,0],['Verdana','','','','','',''],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[1,2,2,2,2,2,2],[10,16,16,16,16,16,16],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[4,20,16,22,800],{},[0,1]]">网格布局生成</a>
+					<a target="_blank" title="基于HTML5技术的专业级图像处理引擎—— AlloyImage开发的在线图片处理平台" class="widget_list widget2x2" href="http://alloyteam.github.io/AlloyPhoto/">alloyphoto</a>
 
-					<a target="_blank" class="widget_list widget2x2" href="http://colorschemedesigner.com/">颜色选择器</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://border-radius.com/">css3圆角生成</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://www.colorzilla.com/">colorzilla</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://css-tricks.com/">css-tricks</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://www.cssreset.com/">Css Reset</a>
-		        	<a target="_blank" class="widget_list widget2x2" href="https://docs.zoho.com/sheet/published.do?rid=p2rrn8066c47a3591451398f45ea6b29bd2d9&mode=html">手机兼容性</a>
+					<a target="_blank" title="提供了ICON图标生成、图片改圆角，在制作LOGO功能" class="widget_list widget2x2" href="http://free.logomaker.cn/">logomaker</a>
+
+					<a target="_blank" title="在保持JPEG图片原有品质和格式的情况下，使图片大小减少为原来的1/5" class="widget_list widget2x2" href="http://www.jpegmini.com/">jpegmini</a>
+					
+		        	<a target="_blank" title="图片占位工具：可设置图片格式、文本、颜色和大小" class="widget_list widget2x2" href="http://www.placehold.it/">placehold</a>
+					<a target="_blank" title="图片占位工具：跟placehold类似" class="widget_list widget2x2" href="http://dummyimage.com/">dummyimage</a>
+					<a target="_blank" title="图片占位工具：还是跟placehold类似的工具" class="widget_list widget2x2" href="http://fpoimg.com/">fpoimg</a>
+					<a target="_blank" title="图片占位工具：在placehold的基础上，多了设置文本样、背景渐变的功能" class="widget_list widget2x2" href="http://placebox.es/">placebox</a>
+					<a target="_blank" title="图片占位工具：可按分类、大小、颜色获取各种真实图片" class="widget_list widget2x2" href="http://lorempixel.com/">lorempixel</a>
+					<a target="_blank" title="图片占位工具：可设置尺寸范围，获取随机大小的真实图片" class="widget_list widget2x2" href="http://hhhhold.com/">hhhhold</a>
+					<a target="_blank" title="图片占位工具：目测只能获取各种大小的猫图片" class="widget_list widget2x2" href="http://placekitten.com/">placekitten</a>	
 		        </div>
-
-		        <div class="widget_box">
-		        	<a target="_blank" class="widget_list widget4x2" href="http://www.mhtml5.com/">HTML5研究小组</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://html5test.com/">html5test</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://caniuse.com/">Can I Use</a>
-		            <a target="_blank" class="widget_list widget4x2" href="http://fmbip.com/litmus/">HTML5&CSS3 Support</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://modernizr.com/">modernizr</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://html5doctor.com/">html5doctor</a>
-		            <a target="_blank" class="widget_list widget4x2" href="http://www.useragentman.com/IETransformsTranslator/">IETransformsTranslator</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://css3generator.com/">css3生成</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://css3maker.com/">css3生成2</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://css3builder.com/">css3生成3</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://css3pie.com/">Css3Pie</a>
+				<div class="widget_box" title="HTML5与CSS3">
+		            <a target="_blank" title="快速生成CSS3样式" class="widget_list widget2x2" href="http://css3generator.com/">css3generator</a>
+		            <a target="_blank" title="类似css3generator" class="widget_list widget2x2" href="http://css3maker.com/">css3maker</a>
+		            <a target="_blank" title="可定制CSS3图片播放展示效果" class="widget_list widget2x2" href="http://css3builder.com/">css3builder</a>
+		            <a target="_blank" title="可定制CSS3样式，且提供了大量demo" class="widget_list widget2x2" href="http://css3pie.com/">Css3Pie</a>
+		            <a target="_blank" title="专注一点，只针对CSS3的圆角的生成" class="widget_list widget2x2" href="http://border-radius.com/">css3圆角生成</a>
+					<a target="_blank" title="纯CSS的loading效果生成，很酷" class="widget_list widget2x2" href="http://cssload.net/">CSS loading生成</a>
+		            <a target="_blank" title="把CSS3转成IE支持的样式" class="widget_list widget4x2" href="http://www.useragentman.com/IETransformsTranslator/">IETransformsTranslator</a>
+					<a target="_blank" title="跨浏览器的CSS3生成器" class="widget_list widget2x2" href="http://css3please.com/">css3please</a>
+		            <a target="_blank" title="很棒的一个背景层的设计工具" class="widget_list widget2x2" href="http://layerstyles.org/builder.html">背景层设计</a>
+		            <a target="_blank" title="提供了firefox和chrome的颜色拾取器插件，一个很棒的在线渐变颜色的生成器" class="widget_list widget2x2" href="http://www.colorzilla.com/">colorzilla</a>
+		            <a target="_blank" title="一个调节渐变颜色的CSS3生成器，感觉没有colorzilla来得好" class="widget_list widget2x2" href="http://colorschemedesigner.com/">渐变颜色调节</a>
+					<a target="_blank" title="又一个css3渐变颜色生成" class="widget_list widget2x2" href="http://gradients.glrzad.com/">css3渐变颜色生成</a>
+		            <a target="_blank" title="可定制很炫的CSS3背景效果，且提供了很多的DEMO" class="widget_list widget2x2" href="http://lea.verou.me/css3patterns/">CSS3背景</a>
+		            <a target="_blank" title="是一个收集纯CSS图形的网站，它包含一些常用的CSS图形，开发者们可以随取随用。" class="widget_list widget2x2" href="http://css3shapes.com/">css3shapes</a>
+		            <a target="_blank" title="是一个生成气泡样式代码的CSS生成器，它可以帮助你实时预览代码，拣选出自己最想要的气泡样式。" class="widget_list widget2x2" href="http://cssarrowplease.com/">cssarrowplease</a>
+		            <a target="_blank" title="cssFx是一个CSS补丁，它允许开发者不必理会各种浏览器的CSS前缀，而自动帮助补齐、添加相应代码。" class="widget_list widget2x2" href="http://imsky.github.io/cssFx/">cssFx</a>
+		        	<a title="HTML5 Please提供HTML5、 CSS3等特性查询，以确认某项功能是否已可供使用，如果可以，它还会提供使用方法。推荐内容包括HTML5“先驱”们的一些使用经验，如果你认为某人的评论并不准确，你也对它进行可以编辑" target="_blank" class="widget_list widget2x2" href="http://html5please.com/">html5please</a>
 		        </div>
+		         <div class="widget_box" title="工具集合">
+		            <a target="_blank" title="很多站长工具" class="widget_list widget2x2" href="http://tool.chinaz.com/">站长工具</a>
+		            <a target="_blank" 
+		            title="非常多的在线工具" class="widget_list widget2x2" href="http://www.ostools.net/">开源中国</a>
+		            <a target="_blank" title="收集了许许多多的API，不限前端" class="widget_list widget2x2" href="http://overapi.com/">在线API</a>
+		            <a target="_blank" title="提供了许多工具：正则表达式调试、JS/CSS代码压缩、JSON格式化、Unicode编码转换、BASE64加解密、ESCAPE加解密、MD5加密、OPEN参数生成器、Marquee生成器等" class="widget_list widget2x2" href="http://www.w3cfuns.com/tools-index.html">前端工具集</a>
+				    <a target="_blank" title="收集了很多小巧的JS库" class="widget_list widget2x2" href="http://microjs.com/">microjs</a>	
+					<a target="_blank" title="提供了许多的CSS资源" class="widget_list widget2x2" href="http://css-tricks.com/">css-tricks</a>
+					<a target="_blank" title="收集了很多流行的reset脚本" class="widget_list widget2x2" href="http://www.cssreset.com/">Css Reset</a>
 
-		        <div class="widget_box">
-		            <a target="_blank" class="widget_list widget2x2" href="http://tool.chinaz.com/">站长工具</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://www.ostools.net/">开源中国</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://overapi.com/">在线API</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://www.w3cfuns.com/tools-index.html">前端神器</a>
-		            <a target="_blank" class="widget_list widget2x2" href="http://jsobfuscate.com/" title="">js代码混淆工具</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://jspretty.com/" title="">js代码美化工具</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://jsbeautifier.org/">JS格式化</a>
-					<a target="_blank" class="widget_list widget2x2" href="http://csslint.net/">csslint</a>
-		            <a target="_blank" class="widget_list widget2x2" href=" http://www.jslint.com/">jslint</a>
+		            <a title="一个网格布局的设计器" target="_blank" class="widget_list widget2x2" href="http://grid.mindplay.dk/#[[0,0,0,0,0,0,0],['Verdana','','','','','',''],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[1,2,2,2,2,2,2],[10,16,16,16,16,16,16],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[4,20,16,22,800],{},[0,1]]">网格布局生成</a>
+
+		            <a target="_blank" class="widget_list widget2x2" href="http://crunchapp.net/" title="Crunch!是一个桌面应用程序，它是一个典型的LESS编辑器，并能帮助你格式化代码。">Crunch!</a>
+
+		            <a target="_blank" class="widget_list widget2x2" href="http://www.dirtymarkup.com/" title="dirtymarkup是一个代码格式化在线工具，它不仅能够格式化CSS代码，也能够格式化JavaScript代码和HTML文档。">dirtymarkup</a>
+
+					<a target="_blank" class="widget_list widget2x2" href="http://jsobfuscate.com/" title="通过先进的算法，来混淆你的JavaScript代码，使其不可读。该工具还可以减小文件的大小，以便快速加载。">js代码混淆工具</a>
+					<a target="_blank" class="widget_list widget2x2" href="http://jspretty.com/" title="在线美化工具——用于解压JavaScript和jQuery代码，以使代码可读。">js代码美化工具</a>
+					<a target="_blank" title="在线美化工具——该工具可以处理你的凌乱的、压缩的JavaScript代码，使代码整齐并具有可读性。" class="widget_list widget2x2" href="http://jsbeautifier.org/">JS格式化</a>
+					<a target="_blank" title="CSS代码质量检测工具，根据用户设定的规则集，发现代码中所隐含的问题" class="widget_list widget2x2" href="http://csslint.net/">csslint</a>
+		            <a target="_blank" title="JS代码质量检测工具，根据用户设定的规则集，发现代码中所隐含的问题" class="widget_list widget2x2" href=" http://www.jslint.com/">jslint</a>
+		            <a title="可以根据上传的HTML文档，采集其中所使用的HTML元素，来生成CSS模板" target="_blank" class="widget_list widget2x2" href="http://bearcss.com/">bearcss</a>
 				</div>
-				<div class="widget_box">
-				    <a target="_blank" class="widget_list widget2x2" href="http://fontawesome.io/">Font Awesome</a>	
-				    <a target="_blank" class="widget_list widget2x2" href="http://microjs.com/">microjs</a>	
+		        <div class="widget_box" title="兼容性测试">
+		            <a target="_blank" title="测试当前浏览器对HTML5和CSS3的支持情况" class="widget_list widget2x2" href="http://html5test.com/">html5test</a>
+		            <a target="_blank" title="可查询各浏览器是否支持CSS3和HTML5的各属性标签" class="widget_list widget2x2" href="http://caniuse.com/">Can I Use</a>
+		            <a target="_blank" title="可查询各浏览器是否支持CSS3和HTML5的各属性标签" class="widget_list widget4x2" href="http://fmbip.com/litmus/">HTML5&CSS3 Support</a>
+		            <a target="_blank" title="JS库，可检测浏览器对HTML5和CSS3的支持情况" class="widget_list widget2x2" href="http://modernizr.com/">modernizr</a>
+		            <a target="_blank" title="提供了HTML5相关的文章资源，可快速查询HTML5在w3.org的定义" class="widget_list widget2x2" href="http://html5doctor.com/resources/">html5doctor</a>
+		        	<a title="淘宝UED的一个手机兼容性测试页面" target="_blank" class="widget_list widget2x2" href="https://docs.zoho.com/sheet/published.do?rid=p2rrn8066c47a3591451398f45ea6b29bd2d9&mode=html">手机兼容性</a>
+		        	<a title="可以很方便地进行跨浏览器的测试" target="_blank" class="widget_list widget2x2" href="http://www.spoon.net/browsers/">浏览器沙箱</a>
+		        	<a title="Browser Support是一个检测浏览器是否支持某项CSS属性的搜索引擎，通过自动完成的搜索功能，它会自动显示所以可能的属性来帮助兼容所有主流浏览器（Chrome、Safari、Firefox、IE、Opera）" target="_blank" class="widget_list widget4x2" href="http://www.browsersupport.net/">CSS 浏览器兼容性搜索引擎</a>
 		        </div>
 			</div>
 		</div>
@@ -211,11 +235,13 @@
 				 	<a target="_blank" class="widget_list widget2x2" href="http://www.99lime.com/">99lime</a>
 				 	<a target="_blank" class="widget_list widget2x2" href="http://imperavi.com/kube/">kube</a>
 				 	<a target="_blank" class="widget_list widget2x2" href="http://lessframework.com/">Less Framework</a>
+
 			       	</div>
 				<div class="widget_box">
-				 	<a target="_blank" class="widget_list widget4x2" href="http://www.ez-css.org/">ez-css</a>
-					<a target="_blank" class="widget_list widget4x2" href="https://github.com/sofish/Alice">Alice</a>
-					<a target="_blank" class="widget_list widget4x2" href="http://nec.netease.com/">NEC</a>
+				 	<a target="_blank" title="专注于智能手机和平板电板的一个响应式的、优雅的、简约的CSS3网格框架" class="widget_list widget2x2" href="http://www.newaeonweb.com.br/responsiveaeon/">responsiveaeon</a>
+				 	<a target="_blank" class="widget_list widget2x2" href="http://www.ez-css.org/">ez-css</a>
+					<a target="_blank" class="widget_list widget2x2" href="https://github.com/sofish/Alice">Alice</a>
+					<a target="_blank" class="widget_list widget2x2" href="http://nec.netease.com/">NEC</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://www.lesscss.net/">Less</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://learnboost.github.io/stylus/">stylus</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://compass-style.org/">compass</a>
@@ -272,9 +298,10 @@
 			    	<a target="_blank" class="widget_list widget2x2" href="http://easyjs.org/">easy.js</a>
 			    	<a target="_blank" class="widget_list widget2x2" href="http://ueditor.baidu.com/website/index.html">ueditor</a>
 			    	<a target="_blank" class="widget_list widget2x2" href="http://www.fusioncharts.com/">FusionCharts</a>
+			    	<a target="_blank" title="Impress.js可以用来创建漂亮的幻灯片，支持在一个无限大的画板上实现移动、旋转和缩放等效果。（通过CSS3 Transition实现，仅支持WebKit浏览器和最新的Firefox、IE。）" class="widget_list widget2x2" href="http://bartaz.github.io/impress.js/#/bored">impress.js</a>
 
 			    </div>
-			    <div class="widget_box">
+			    <div class="widget_box" >
 			    	<a target="_blank" class="widget_list widget4x2" href="http://nodejs.org/">node.js</a>
 			    	<a target="_blank" class="widget_list widget4x2" href="http://expressjs.com/">express</a>
 			    	<a target="_blank" class="widget_list widget4x2" href="https://github.com/sofish/express-guide">express中文</a>
@@ -300,8 +327,8 @@
 		<div class="article_inner_box">
 			<div class="widget_box_list">
 				<div class="widget_box">
-		            <a target="_blank" class="widget_list widget4x2" href="http://fis.baidu.com/">F.I.S</a>
-		            <a target="_blank" class="widget_list widget4x2" href="http://yeoman.io/">yeoman</a>
+		            <a target="_blank" title="百度web前端研发部成立F.I.S团队探索出的一套前端集成解决方案，解决了诸多前端领域开发的核心问题" class="widget_list widget4x2" href="http://fis.baidu.com/">F.I.S</a>
+		            <a target="_blank" title="Yeoman是由Paul Irish、Addy Osmani、Sindre Sorhus、Mickael Daniel、Eric Bidelman和Yeoman社区共同开发的一个项目。它旨在为开发者提供一系列健壮的工具、程序库和工作流，帮助他们快速构建出漂亮、引人注目的Web应用。" class="widget_list widget4x2" href="http://yeoman.io/">yeoman</a>
 				</div>
 			</div>
 		</div>
@@ -315,6 +342,9 @@
 		$(function(){
 			 var bgcolors = ["bgcolor1", "bgcolor2", "bgcolor3", "bgcolor4", "bgcolor5", "bgcolor6", "bgcolor7", "bgcolor8", "bgcolor9", "bgcolor10", "bgcolor11", "bgcolor12", "bgcolor13"];
 			 var bbgcolors = ["bbgcolor3", "bbgcolor2", "bbgcolor1","bbgcolor2", "bbgcolor3", "bbgcolor1", "bbgcolor2", "bbgcolor3"];
+			 var setSubTitle = function(){
+
+			 };
 			 var setNavBtn = function(){
 			 	$(".article_box").each(function(){
 		      		var $aBox = $(this),
@@ -352,7 +382,7 @@
 		      		var $wboxs = $abox.find(".widget_box");
 		      		var nw = $wboxs.length * $abox.width();
 		      		$wboxs.parent().width(nw);
-      				setNavBtn($abox);
+      				setNavBtn();
 		      });
 		      setNavBtn();
 		      $(".article_box .nav_arrow").click(function(){

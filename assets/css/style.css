@@ -237,6 +237,9 @@ img {
     border-color:#144263;
     _position:relative;
 }
+.article_title .sub_title{
+    color:#eee;
+}
 .article_box .entry {
     padding:0 20px 20px;
     width:660px;
