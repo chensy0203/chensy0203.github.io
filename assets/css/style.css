@@ -237,8 +237,14 @@ img {
     border-color:#144263;
     _position:relative;
 }
-.article_title .sub_title{
+.article_tool_bar .sub_title{
     color:#eee;
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    text-align: center;
+    margin-top: 15px;
 }
 .article_box .entry {
     padding:0 20px 20px;
@@ -1144,3 +1150,5 @@ table th[class*="span"],
 .bgcolor11 {background-color: #034888;}
 .bgcolor12 {background-color: #5859B9;}
 .bgcolor13 {background-color: #D54D34;}
+.page_index_box {position: fixed;right: 20px;width: 8em;top: 145px;display:none;}
+.page_index a{width:8em;}

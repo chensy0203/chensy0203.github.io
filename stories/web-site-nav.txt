@@ -21,8 +21,9 @@
 		<div class="article_title full_width mb0">
 			<h3>那些博客</h3>
 		</div>
-		<div class="widget_box_btn">
+		<div class="article_tool_bar widget_box_btn">
 			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<h4 class="sub_title"></h4>
 			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
 		</div>
 		<div class="article_inner_box">
@@ -118,8 +119,9 @@
 		<div class="article_title full_width mb0" >
 			<h3>那些工具</h3>
 		</div>
-		<div class="widget_box_btn">
+		<div class="article_tool_bar widget_box_btn">
 			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<h4 class="sub_title"></h4>
 			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
 		</div>
 		<div class="article_inner_box">
@@ -208,8 +210,9 @@
 		<div class="article_title full_width mb0" >
 			<h3>那些CSS</h3>
 		</div>
-		<div class="widget_box_btn">
+		<div class="article_tool_bar widget_box_btn">
 			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<h4 class="sub_title"></h4>
 			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
 		</div>
 		<div class="article_inner_box">
@@ -254,8 +257,9 @@
 		<div class="article_title full_width mb0" >
 			<h3>那些JS</h3>
 		</div>
-		<div class="widget_box_btn">
+		<div class="article_tool_bar widget_box_btn">
 			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<h4 class="sub_title"></h4>
 			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
 		</div>
 		<div class="article_inner_box">
@@ -320,8 +324,9 @@
 		<div class="article_title full_width mb0" >
 			<h3>那些解决方案</h3>
 		</div>
-		<div class="widget_box_btn">
+		<div class="article_tool_bar widget_box_btn">
 			<img class="nav_arrow arrow_left" src="../assets/images/arrowLeft.png" alt="上一页">
+			<h4 class="sub_title"></h4>
 			<img  class="nav_arrow arrow_right" src="../assets/images/arrowRight.png" alt="下一页" >
 		</div>
 		<div class="article_inner_box">
@@ -338,12 +343,26 @@
 			<li>暂时就先这些吧……</li>
 		</ul>
 	</div>
+	<div class="page_index_box">
+		<ul class="cate_box">
+			<li>
+				前端导航
+				<ul class="page_index">
+					
+				</ul>
+			</li>
+		</ul>
+	</div>
 	<script type="text/javascript">
 		$(function(){
 			 var bgcolors = ["bgcolor1", "bgcolor2", "bgcolor3", "bgcolor4", "bgcolor5", "bgcolor6", "bgcolor7", "bgcolor8", "bgcolor9", "bgcolor10", "bgcolor11", "bgcolor12", "bgcolor13"];
 			 var bbgcolors = ["bbgcolor3", "bbgcolor2", "bbgcolor1","bbgcolor2", "bbgcolor3", "bbgcolor1", "bbgcolor2", "bbgcolor3"];
 			 var setSubTitle = function(){
-
+			 	$(".article_inner_box").each(function(){
+			 		var index = this.scrollLeft/1000;
+			 		var title = $(this).find(".widget_box").eq(index).attr("title")||"";
+			 		$(this).parent().find(".article_tool_bar .sub_title").html(title);
+			 	});
 			 };
 			 var setNavBtn = function(){
 			 	$(".article_box").each(function(){
@@ -385,6 +404,7 @@
       				setNavBtn();
 		      });
 		      setNavBtn();
+		      setSubTitle();
 		      $(".article_box .nav_arrow").click(function(){
 		      		var $aBox = $(this).parent().parent(),
 		      			$wBoxList = $aBox.find(".widget_box_list"),
@@ -396,6 +416,7 @@
 		      			}
 		      			$iBox.animate({scrollLeft:cur+"px"},500,function(){
 		      				setNavBtn();
+		      				setSubTitle();
 		      			});
 		      		}else{//右移，显示左边
 		      			var cur = $iBox[0].scrollLeft + 1000;
@@ -405,9 +426,26 @@
 		      			}
 		      			$iBox.animate({scrollLeft:cur+"px"},500,function(){
 		      				setNavBtn();
+		      				setSubTitle();
 		      			});
-		      			
 		      		}
+		      });
+
+		      $(".article_box").each(function(){
+		      	var tmpl = '<li><a href="javascript:void(0)" data-id="$id" title="$title" class="page_nav">$title</a></li>';
+		      	var title = $(this).find(".article_title h3").html();
+		      	var id = $(this).attr("id");
+		      	tmpl = tmpl.replace("$id",id);
+		      	tmpl = tmpl.replace(/\$title/g,title);
+		      	$(".page_index_box .page_index").append(tmpl);
+		      });
+		      $(".page_index_box").fadeIn();
+		      //页面导航
+		      $(".page_index").on("click",".page_nav",function(){
+		      	var id = $(this).attr("data-id");
+		      	$('html,body').animate({
+                        scrollTop: $("#"+id).offset().top
+                        },1000);
 		      });
 		});
 	</script>
