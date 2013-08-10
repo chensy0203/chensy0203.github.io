@@ -1,0 +1,228 @@
+.. date: 2013/08/03 14:22:30
+.. slug: css-hack
+.. title: css-hack
+.. tags: css
+.. link: 
+.. comment: True
+.. description: CSS HACK,浏览器兼容性
+
+
+	越来越多的浏览器出现，曾经的CSS HACK现在还能HACK吗？
+	不知道，所以我收集了网上一些常用的HACK，自己做了一下测试，记录下来，以方便查看。
+
+	HACK主要分为CSS选择器HACK、CSS属性HACK、IE条件注释HACK和JS判断HACK；各有优缺点，不必纠结于某一方式，具体问题具体分析。这里主要记录的是CSS选择器和属性HACK。
+
+	以下测试结果是在：Win7 64位系统，默认IE10浏览器，使用IE10下的IE789浏览器模式，使用IE6绿色版浏览器，使用Opera 12.15，使用Firefox 21，Safari 4，Google Chrome 28，进行测试的。如果有什么错误，请指正！
+
+.. TEASER_END
+
+.. raw:: html
+	
+	<style>
+	.ie6-hack{_background-color:#38DB24;}
+	.ie67-hack{*background-color:#38DB24;}
+	.ie67-2-hack{+background-color:#38DB24;}
+	.ie67-3-hack{#background-color:#38DB24;}
+	.ie67-4-hack{background-color:#38DB24 !ie;}
+	.ie678910-hack{background-color:#38DB24\9;}
+	html>body .ie78910-all-hack { background-color: #38DB24 }
+	html>/**/body .ie8910-all-hack { background-color: #38DB24 }
+	.ie8910-opera-hack{background-color:#38DB24\0;}
+	:root .ie910-hack { background-color:#38DB24\9; } 
+	.ie910-2-hack{background-color:#38DB24\9\0;}
+	body:nth-of-type(1) .ie910-all-hack{background-color:#38DB24 ;}
+	body:first-of-type .ie910-all-2-hack{background-color:#38DB24 ;}
+	@media all and (min-width: 0px){ 
+		.ie910-all-3-hack{background-color:#38DB24 ;} 
+	}
+	:root *> .ie910-all-4-hack{ background-color:#38DB24 }
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   		.ie10-hack{background-color:#38DB24 ;}
+	}
+	@-moz-document url-prefix(){ .firefox-hack{background-color:#38DB24 ;} }
+	
+	@media screen and (-webkit-min-device-pixel-ratio:0){
+	 	.chrome-safari-hack{background-color:#38DB24 ;}
+	}
+
+	</style>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>浏览器（绿色表示当前浏览器支持）</th>
+				<th>CSS hack</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="ie6-hack">IE6</td>
+				<td>
+					<code>
+						_background-color:#38DB24;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie67-hack">IE67</td>
+				<td>
+					<code>
+						*background-color:#38DB24 ;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie67-2-hack">IE67</td>
+				<td>
+					<code>
+						+background-color:#38DB24 ;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie67-3-hack">IE67</td>
+				<td>
+					<code>
+						#background-color:#38DB24;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie67-4-hack">IE67</td>
+				<td>
+					<code>
+						background-color:#38DB24 !ie;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie678910-hack">IE678910</td>
+				<td>
+					<code>
+						background-color:#38DB24\9;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie78910-all-hack">IE78910&Firefox&Opera&Chrome&Safari</td>
+				<td>
+					<code>
+						html>body .ie78910-all-hack <br/>
+						{ background-color: #38DB24 }
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie8910-all-hack">IE8910&Firefox&Opera&Chrome&Safari</td>
+				<td>
+					<code>
+						html>/**/body .ie8910-all-hack<br/> 
+						{ background-color: #38DB24 }
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie8910-opera-hack">IE8910&Opera</td>
+				<td>
+					<code>
+						background-color:#38DB24\0;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie910-hack">IE910</td>
+				<td>
+					<code>
+						:root .ie910-hack <br/>
+						{ background-color:#38DB24\9; }
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie910-2-hack">IE910</td>
+				<td>
+					<code>
+						 background-color:#38DB24\9\0;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie910-all-hack">IE910&Firefox&Opera&Chrome&Safari</td>
+				<td>
+					<code>
+						body:nth-of-type(1) .ie910-all-hack<br/>
+						{background-color:#38DB24 ;}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie910-all-2-hack">IE910&Firefox&Opera&Chrome&Safari</td>
+				<td>
+					<code>
+						@media all and (min-width: 0px)<br/>
+						{ 
+						.ie910-all-2-hack{
+							background-color:#38DB24 ;} 
+						}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie910-all-3-hack">IE910&Firefox&Opera&Chrome&Safari</td>
+				<td>
+					<code>
+						@media all and (min-width: 0px)<br/>
+						{
+							.ie910-all-3-hack{background-color:#38DB24 ;} 
+						}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie910-all-4-hack">IE910&Firefox&Opera&Chrome&Safari</td>
+				<td>
+					<code>
+						:root *> .ie910-all-4-hack<br/>
+						{ background-color:#38DB24 }
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="ie10-hack">IE10</td>
+				<td>
+					<code>
+						@media screen and (-ms-high-contrast: active),<br/>
+						 (-ms-high-contrast: none) <br/>
+						{ 
+							.ie10-hack{background-color:#38DB24 ;}
+						}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td class="firefox-hack">Firefox</td>
+				<td>
+					<code>
+						@-moz-document url-prefix()<br/>
+						{ .firefox-hack{background-color:#38DB24 ;} }
+					</code>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="chrome-safari-hack">Chrome&Safari</td>
+				<td>
+					<code>
+						@media screen and (-webkit-min-device-pixel-ratio:0)
+						<br/>
+	 					{.chrome-safari-hack{background-color:#38DB24 ;}
+						}
+					</code>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+其实，我对HACK不熟悉，也不太想去熟悉。与其去记那一堆难记的标记，倒不如多学习一些HTML5和CSS3的新标准。
+
+虽然，现在老式的浏览器逐渐淘汰，但工作上难免遇到一些不得不去HACK的时候，所以才有了这篇文章。

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Wed, 31 Jul 2013 11:08:38 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>hello node-webkit</title><link>http://chensy0203.github.com/posts/hello-node-webkit.html</link><description>&lt;div&gt;&lt;div class="section" id="node-webkit"&gt;
+<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sat, 10 Aug 2013 19:29:17 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>css-hack</title><link>http://chensy0203.github.com/posts/css-hack.html</link><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;越来越多的浏览器出现，曾经的CSS HACK现在还能HACK吗？
+不知道，所以我收集了网上一些常用的HACK，自己做了一下测试，记录下来，以方便查看。&lt;/p&gt;
+&lt;p&gt;HACK主要分为CSS选择器HACK、CSS属性HACK、IE条件注释HACK和JS判断HACK；各有优缺点，不必纠结于某一方式，具体问题具体分析。这里主要记录的是CSS选择器和属性HACK。&lt;/p&gt;
+&lt;p&gt;以下测试结果是在：Win7 64位系统，默认IE10浏览器，使用IE10下的IE789浏览器模式，使用IE6绿色版浏览器，使用Opera 12.15，使用Firefox 21，Safari 4，Google Chrome 28，进行测试的。如果有什么错误，请指正！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/css-hack.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>css</category><guid>http://chensy0203.github.com/posts/css-hack.html</guid><pubDate>Sat, 03 Aug 2013 14:22:30 GMT</pubDate></item><item><title>hello node-webkit</title><link>http://chensy0203.github.com/posts/hello-node-webkit.html</link><description>&lt;div&gt;&lt;div class="section" id="node-webkit"&gt;
 &lt;h2&gt;什么是node-webkit？&lt;/h2&gt;
 &lt;p&gt;node-webkit是一个基于Chromium与Node.js的应用程序运行器，允许开发者使用web技术编写桌面应用程序。它是在英特尔的开源技术中心创建和发展起来的。&lt;/p&gt;
 &lt;/div&gt;
