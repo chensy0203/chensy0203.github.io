@@ -1,6 +1,6 @@
-.. date: 2013/08/03 14:22:30
+.. date: 2013/08/10 10:22:30
 .. slug: css-hack
-.. title: css-hack
+.. title: CSS HACK
 .. tags: css
 .. link: 
 .. comment: True
