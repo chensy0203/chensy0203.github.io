@@ -110,6 +110,8 @@
 					<a target="_blank" class="widget_list widget4x2" href="http://blog.mycolorway.com/">彩程设计</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://www.cssha.com/">前端手记</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://oklai.name/">oklai's blog</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://xux.taobao.com/">淘宝XX</a>
+					<a target="_blank" class="widget_list widget4x2" href="http://www.html-js.com/">前端乱炖</a>
 			    </div>
 			</div>
 		</div>
@@ -249,6 +251,12 @@
 					<a target="_blank" class="widget_list widget4x2" href="http://learnboost.github.io/stylus/">stylus</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://compass-style.org/">compass</a>
 					<a target="_blank" class="widget_list widget4x2" href="http://sass-lang.com/">sass</a>
+					<a target="_blank" title="Furatto 是一个扁平化风格，功能强大的前端开发框架，这个框架基于 Bootstrap 和 Foundation 等框架，可以用它快速 Web 开发。这个框架基于最新潮的扁平化 UI 风格，并且支持响应式设计。" class="widget_list widget2x2" href="http://icalialabs.github.io/furatto/index.html">Furatto</a>
+					<a target="_blank" title="Cardinal 是一个小型的移动优先的 CSS 框架，提供很多有用的默认样式、可缩放排版、可重用模块和一个简单的响应式表格系统。" class="widget_list widget2x2" href="http://cardinalcss.com/">Cardinal</a>
+					<a target="_blank" title="Ratchet 可使用简单的 HTML、JS 和 CSS 来制作一个 iPhone 应用的原型。" class="widget_list widget2x2" href="http://maker.github.io/ratchet/">Ratchet</a>
+					<a target="_blank" title="Flat UI是一套精美的扁平风格 UI 工具包，基于 Twitter Bootstrap 实现。这套界面工具包含许多基本的和复杂的 UI 部件，例如按钮，输入框，组合按钮，复选框，单选按钮，标签，菜单，进度条和滑块，导航元素等等。" class="widget_list widget2x2" href="https://github.com/designmodo/Flat-UI">Flat UI</a>
+					<a target="_blank" title="a powerful, scalable, Sass-based, BEM, OOCSS framework." class="widget_list widget2x2" href="http://inuitcss.com/">inuit.css</a>
+					<a target="_blank" title="Hint.css 是一个 CSS 实现的工具提示效果。无需 JavaScript 代码。" class="widget_list widget2x2" href="http://kushagragour.in/lab/hint/">HINT.css</a>
 				</div>
 			</div>
 		</div>
@@ -315,6 +323,9 @@
 			    	<a target="_blank" class="widget_list widget4x2" href="https://github.com/kissjs/node-mongoskin">mongoskin</a>
 
 			    	<a target="_blank" class="widget_list widget4x2" href="http://gruntjs.com/">grunt</a>
+			    	<a target="_blank" class="widget_list widget2x2" href="http://visionmedia.github.io/uikit/">uikit</a>
+			    	<a target="_blank" class="widget_list widget2x2" href="http://skeljs.org/">skelJS</a>
+			    	<a target="_blank" title="用JS在客户端生成的占位图片" class="widget_list widget2x2" href="http://imsky.github.io/holder/">Holder.js</a>
 			    </div>
 			</div>
 		</div>
