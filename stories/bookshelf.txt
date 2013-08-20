@@ -49,6 +49,12 @@
 	</li>
 	<li class="">
 	    <a href="javascript:void(0)" class="thumbnail">
+	        <img data-original="../assets/images/html5ycss3qwzn2.jpg" src="../assets/images/spacer.gif" width="200" height="262"/>
+	    </a>
+	    <div class="title"><a href="javascript:void(0)">HTML5与CSS3权威指南（下册）</a></div>
+	</li>
+	<li class="">
+	    <a href="javascript:void(0)" class="thumbnail">
 	        <img data-original="../assets/images/4.png" src="../assets/images/spacer.gif" width="200" height="200"/>
 	    </a>
 	    <div class="title"><a href="javascript:void(0)">汗，想不起还看过什么书了</a></div>

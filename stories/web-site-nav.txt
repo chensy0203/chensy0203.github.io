@@ -318,14 +318,17 @@
 			    	<a target="_blank" class="widget_list widget4x2" href="http://expressjs.com/">express</a>
 			    	<a target="_blank" class="widget_list widget4x2" href="https://github.com/sofish/express-guide">express中文</a>
 
-			    	<a target="_blank" class="widget_list widget4x2" href="http://mongoosejs.com/">mongoose</a>
-			    	<a target="_blank" class="widget_list widget4x2" href="https://github.com/amark/mongous">mongous</a>
-			    	<a target="_blank" class="widget_list widget4x2" href="https://github.com/kissjs/node-mongoskin">mongoskin</a>
+			    	<a target="_blank" class="widget_list widget2x2" href="http://mongoosejs.com/">mongoose</a>
+			    	<a target="_blank" class="widget_list widget2x2" href="https://github.com/amark/mongous">mongous</a>
+			    	<a target="_blank" class="widget_list widget2x2" href="https://github.com/kissjs/node-mongoskin">mongoskin</a>
 
-			    	<a target="_blank" class="widget_list widget4x2" href="http://gruntjs.com/">grunt</a>
+			    	<a target="_blank" class="widget_list widget2x2" href="http://gruntjs.com/">grunt</a>
 			    	<a target="_blank" class="widget_list widget2x2" href="http://visionmedia.github.io/uikit/">uikit</a>
 			    	<a target="_blank" class="widget_list widget2x2" href="http://skeljs.org/">skelJS</a>
 			    	<a target="_blank" title="用JS在客户端生成的占位图片" class="widget_list widget2x2" href="http://imsky.github.io/holder/">Holder.js</a>
+			    	<a target="_blank" title="能在JavaScript中简化3D使用的库" class="widget_list widget2x2" href="http://threejs.org/">three.js</a>
+			    	<a target="_blank" title="" class="widget_list widget2x2" href="http://www.createjs.com/">CreateJS</a>
+			    	<a target="_blank" title="" class="widget_list widget2x2" href="http://www.createjs.com/#!/EaselJS">EaselJS</a>
 			    </div>
 			</div>
 		</div>
