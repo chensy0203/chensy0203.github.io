@@ -9,7 +9,7 @@
 
 * 英文名：chensy
 * Java Web开发工程师，前端爱好者，技术宅
-* 苦逼的创业者 ( 我们的网站：`竞考网 <http://jingkao.net>`_ )
+* 苦逼的打工者
 * 希望通过这个博客能结识更多志同道合的人
 
 PS：本博客是用 `nikola <http://nikola.ralsina.com.ar/>`_ 生成，主题是参考 `雨夜带刀 <http://stylechen.com/>`_ ，挂载在 `GitHub Pages <http://pages.github.com/>`_ ，评论服务用的是 `多说 <http://duoshuo.com/>`_。
