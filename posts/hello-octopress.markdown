@@ -2,7 +2,7 @@
 .. title: 用octopress写博客
 .. slug: hello-octopress
 .. date: 2013/02/24 15:45:00
-.. tags: octopress, hello
+.. tags: 博客建设, hello
 .. comment: True
 .. link:
 .. description: octopress, windows7, GitHub Pages, 静态博客 

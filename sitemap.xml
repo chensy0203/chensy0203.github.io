@@ -26,17 +26,22 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/</loc>
-  <lastmod>2013-07-20</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/blog.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://chensy0203.github.com/categories/bo-ke-jian-she.html</loc>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/css.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -46,7 +51,7 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/fan-yi.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -56,12 +61,12 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/hello.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/index.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -76,7 +81,7 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/categories/node-webkit.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -116,7 +121,7 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/index.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -136,22 +141,22 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/posts/about-blog.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/posts/about-web-site-nav.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/posts/css-hack.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/posts/hello-markdown.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -161,12 +166,12 @@
  </url>
  <url>
   <loc>http://chensy0203.github.com/posts/hello-octopress.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://chensy0203.github.com/posts/hello-rst.html</loc>
-  <lastmod>2013-09-09</lastmod>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -177,6 +182,11 @@
  <url>
   <loc>http://chensy0203.github.com/posts/pure-css-zh.html</loc>
   <lastmod>2013-09-09</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://chensy0203.github.com/posts/update-pure-site-03.html</loc>
+  <lastmod>2013-09-22</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>

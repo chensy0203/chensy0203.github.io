@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="pure, css框架, pure翻译, pure中文版">
     <meta name="author" content="chensy">
-    <title>pure中文网站终于安家落户了 | chensy's blog</title>
+    <title>pure 0.3.0发布了，pure中文网站也更新了 | chensy's blog</title>
     
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
@@ -46,43 +46,53 @@
     <div class="article_box">
     	<div class="article_title">
     		
-    <h3>pure中文网站终于安家落户了</h3>
+    <h3>pure 0.3.0发布了，pure中文网站也更新了</h3>
 
     	</div>
 	    <div class="entry ">                    
-		    	<p>断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。</p>
-<p>近期，我很想翻译一些东西，学习下新知识，复习下英语，顺便丰富下博客内容。我刚好在近期的一个小项目试用了下pure，感觉不错，小巧简洁，上手快，不过目前还没有中文文档，刚好我可以翻译下^_^。</p>
-<p>想到，就开始做。</p>
-<p>昨天在github上把 <a class="reference external" href="https://github.com/yui/pure-site">pure-site</a> clone了一份到本地，尝试翻译了一小部分，感觉挺顺利的。</p>
-<p>虽然，只是翻译了一点点，但还是想把中文网站部署到线上先。</p>
-<p>今天，我才发现我没有主机，于是上网找了一些支持nodejs的免费主机。由于国情，邀先选择了国内的云平台。于是，上BAE申请邀请码，但现在还没回复，看网上评论说，有的几个星期都没有回复，汗！接着，就去找NAE的邀请码，居然在 <a class="reference external" href="http://www.v2ex.com/">V2EX</a> 求得了一个，太开心了！但是当把项目部署到NAE上时，中间没提示任何错，以为是成功了，但是最终提示未监听端口，google了下好多方法，试了都不行，看了下应用广场，大部人创建的应用都是访问不了的，也有人遇到跟我同样的问题。算了，试下国外的服务吧。试了下OpenShift，用得莫名奇妙的，放弃！最后试了下AppFog，照着文档说明尝试了几次，弄明白了用法后，果断成功了。</p>
-<p>网站基本架设好了，这是网址：<a class="reference external" href="http://pure-site.ap01.aws.af.cm/">http://pure-site.ap01.aws.af.cm/</a> （虽然域名有点难看，但至少可以用了）明天开始就可以抽时间专心翻译了^_^。</p>
-<!-- TEASER_END -->
-<div class="section" id="todo">
-<h2>TODO</h2>
-<ul class="simple">
-<li><span class="strike">搭建中文网站</span> 2013-07-10</li>
-<li><span class="strike">翻译HOME页面</span> 2013-07-11</li>
-<li><span class="strike">翻译Base模块</span> 2013-07-14</li>
-<li><span class="strike">翻译Grids模块</span> 2013-07-14</li>
-<li><span class="strike">翻译Forms模块</span> 2013-07-14</li>
-<li><span class="strike">翻译Buttons模块</span> 2013-07-14</li>
-<li><span class="strike">翻译Tables模块</span> 2013-07-14</li>
-<li><span class="strike">翻译Menus模块</span> 2013-07-14</li>
-<li><span class="strike">翻译定制页面</span> 2013-07-16</li>
-<li><span class="strike">翻译扩展页面</span> 2013-07-16</li>
-<li><span class="strike">增加CNZZ统计</span> 2013-07-16</li>
-<li><span class="strike">核对翻译页面</span> 2013-09-20</li>
-<li>增加Demo展示</li>
+		    	<p>Pure发布新版本0.3.0也有一小段时间了，但最近一直在忙，没时间更新。现在趁着中秋放假，对中文网站做了一次同步更新，^_^!</p>
+<p>先来看下pure0.3.0有哪些改变吧！</p>
+<p>最大的改变，莫过于网格（grids）模块了！修复了上个版本两个比较严重的bug。</p>
+<ul>
+<li>
+<p>旧的IE浏览器上，网格单元格有时会被挤到新一行，具体可看<a href="https://github.com/yui/pure/issues/154/" target="_blank">issues154</a></p>
+</li>
+<li>
+<p>如果开发者使用了定制的字体，网格单元格也会被挤到新一行，具体可看<a href="https://github.com/yui/pure/issues/41/" target="_blank">issues14</a></p>
+</li>
 </ul>
-</div>  
+<p>网格现在使用了CSS3的Flexbox，避免了对letter-spacing设置负数后可能产生的副作用。同时网格也使用了特定的字体栈去保证不同浏览器之间的兼容性。默认的网格都设置了  font-family:sans-serif;</p>
+<p>如果你需要使用非默认的字体，pure推荐你这样子用</p>
+<div class="code"><pre><span class="n">body</span><span class="p">,</span>
+<span class="p">.</span><span class="n">pure</span><span class="o">-</span><span class="n">g</span> <span class="p">[</span><span class="n">class</span> <span class="o">*=</span> <span class="s">"pure-u"</span><span class="p">],</span>
+<span class="p">.</span><span class="n">pure</span><span class="o">-</span><span class="n">g</span><span class="o">-</span><span class="n">r</span> <span class="p">[</span><span class="n">class</span> <span class="o">*=</span> <span class="s">"pure-u"</span><span class="p">]</span> <span class="p">{</span>
+    <span class="cm">/* Set you're content font stack here, for example: */</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="o">:</span> <span class="n">Georgia</span><span class="p">,</span> <span class="n">Times</span><span class="p">,</span> <span class="s">"Times New Roman"</span><span class="p">,</span> <span class="n">serif</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>其他改变：
+* 上个版本使用pure时，是需要自己先手工引入Normalize.css；而当前版本已经把Normalize.css打包到基本模块里面，不需要再手工引入。</p>
+<ul>
+<li>
+<p>删除forms-core.css模块，因为这个模块是Normalize.css的一些form样式的复制，而当前版本已经包含了Normalize.css，所以不需要了。</p>
+</li>
+<li>
+<p>给input添加readonly属性，设置了readonly属性的input是可以被focus的</p>
+</li>
+<li>
+<p>给.pure-g-r下的图片添加height:auto规则，使得当调整页面大小的时候，它们的长宽比例能保持。</p>
+</li>
+</ul>
+<p>好了，点击 <a href="http://pure-site.ap01.aws.af.cm/">http://pure-site.ap01.aws.af.cm/</a> 访问吧</p>  
         </div>
             <div class="source">
-               <a href="pure-css-zh.txt" id="sourcelink">源代码</a>
+               <a href="update-pure-site-03.markdown" id="sourcelink">源代码</a>
             </div>
         <div class="art_copy">
             <p>原载于：chensy's blog</p>
-            <p>本文链接：http://chensy0203.github.com/posts/pure-css-zh.html</p>
+            <p>本文链接：http://chensy0203.github.com/posts/update-pure-site-03.html</p>
             <p>如需转载请以链接形式注明原载或原文地址。</p>      
         </div>
 	    <ul class="article_info">
@@ -100,13 +110,13 @@
                     </li>
                 </ul>
              </li>
-             <li class="date">2013-07-10 22:25</li>
+             <li class="date">2013-09-21 11:12</li>
         </ul>
     </div>
 
         
     <!-- Duoshuo Comment BEGIN -->
-    <div class="ds-thread" data-thread-key="1373466311.0" data-title="&lt;bound method Post.title of &lt;nikola.post.Post object at 0x000000000451B278&gt;&gt;" data-author-key="chensy"></div>
+    <div class="ds-thread" data-thread-key="1379733134.0" data-title="&lt;bound method Post.title of &lt;nikola.post.Post object at 0x000000000451F9B0&gt;&gt;" data-author-key="chensy"></div>
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"chensy0203"};
     (function() {

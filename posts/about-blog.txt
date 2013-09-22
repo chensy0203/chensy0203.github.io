@@ -1,6 +1,6 @@
 .. link: 
 .. slug: about-blog
-.. tags: blog
+.. tags: 博客建设
 .. date: 2013/07/07 14:43:01
 .. comment: True
 .. description: static blog, nikola, 静态博客, octopress, hexo , liquidluck ,xiaoxiaotian 

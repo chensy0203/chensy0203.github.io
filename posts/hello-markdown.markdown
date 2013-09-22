@@ -1,5 +1,5 @@
 <!-- 
-.. tags: markdown, hello
+.. tags: 博客建设, hello
 .. title: hello-markdown
 .. date: 2013/06/28 11:27:46
 .. link: http://wowubuntu.com/markdown/

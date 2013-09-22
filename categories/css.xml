@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog (css)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sat, 10 Aug 2013 19:37:14 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CSS HACK</title><link>http://chensy0203.github.com/posts/css-hack.html</link><description>&lt;div&gt;&lt;blockquote&gt;
+<rss version="2.0"><channel><title>chensy's blog (css)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 22 Sep 2013 20:43:38 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pure 0.3.0发布了，pure中文网站也更新了</title><link>http://chensy0203.github.com/posts/update-pure-site-03.html</link><description>&lt;p&gt;Pure发布新版本0.3.0也有一小段时间了，但最近一直在忙，没时间更新。现在趁着中秋放假，对中文网站做了一次同步更新，^_^!&lt;/p&gt;
+&lt;p&gt;先来看下pure0.3.0有哪些改变吧！&lt;/p&gt;
+&lt;p&gt;最大的改变，莫过于网格（grids）模块了！修复了上个版本两个比较严重的bug。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;旧的IE浏览器上，网格单元格有时会被挤到新一行，具体可看&lt;a href="https://github.com/yui/pure/issues/154/" target="_blank"&gt;issues154&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果开发者使用了定制的字体，网格单元格也会被挤到新一行，具体可看&lt;a href="https://github.com/yui/pure/issues/41/" target="_blank"&gt;issues14&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;网格现在使用了CSS3的Flexbox，避免了对letter-spacing设置负数后可能产生的副作用。同时网格也使用了特定的字体栈去保证不同浏览器之间的兼容性。默认的网格都设置了  font-family:sans-serif;&lt;/p&gt;
+&lt;p&gt;如果你需要使用非默认的字体，pure推荐你这样子用&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pure&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="s"&gt;"pure-u"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pure&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="s"&gt;"pure-u"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="cm"&gt;/* Set you're content font stack here, for example: */&lt;/span&gt;
+    &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Georgia&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Times&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"Times New Roman"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;serif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其他改变：
+* 上个版本使用pure时，是需要自己先手工引入Normalize.css；而当前版本已经把Normalize.css打包到基本模块里面，不需要再手工引入。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;删除forms-core.css模块，因为这个模块是Normalize.css的一些form样式的复制，而当前版本已经包含了Normalize.css，所以不需要了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给input添加readonly属性，设置了readonly属性的input是可以被focus的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给.pure-g-r下的图片添加height:auto规则，使得当调整页面大小的时候，它们的长宽比例能保持。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好了，点击 &lt;a href="http://pure-site.ap01.aws.af.cm/"&gt;http://pure-site.ap01.aws.af.cm/&lt;/a&gt; 访问吧&lt;/p&gt;</description><category>翻译</category><category>css</category><guid>http://chensy0203.github.com/posts/update-pure-site-03.html</guid><pubDate>Sat, 21 Sep 2013 11:12:14 GMT</pubDate></item><item><title>CSS HACK</title><link>http://chensy0203.github.com/posts/css-hack.html</link><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;越来越多的浏览器出现，曾经的CSS HACK现在还能HACK吗？
 不知道，所以我收集了网上一些常用的HACK，自己做了一下测试，记录下来，以方便查看。&lt;/p&gt;
 &lt;p&gt;HACK主要分为CSS选择器HACK、CSS属性HACK、IE条件注释HACK和JS判断HACK；各有优缺点，不必纠结于某一方式，具体问题具体分析。这里主要记录的是CSS选择器和属性HACK。&lt;/p&gt;

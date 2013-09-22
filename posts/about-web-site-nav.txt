@@ -3,7 +3,7 @@
 .. date: 2013/07/12 21:34:08
 .. link: 
 .. slug: about-web-site-nav
-.. tags: 前端
+.. tags: 博客建设
 .. comment: True
 
 折腾了一天，终于把 `前端导航 </stories/web-site-nav.html>`_ 的页面做好了^_^。

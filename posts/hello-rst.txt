@@ -1,4 +1,4 @@
-.. tags: hello,rst
+.. tags: hello,博客建设
 .. description:  rst, 语法
 .. title: hello-rst
 .. slug: hello-rst

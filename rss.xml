@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 18 Aug 2013 18:56:52 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CSS HACK</title><link>http://chensy0203.github.com/posts/css-hack.html</link><description>&lt;div&gt;&lt;blockquote&gt;
+<rss version="2.0"><channel><title>chensy's blog</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 22 Sep 2013 20:43:38 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pure 0.3.0发布了，pure中文网站也更新了</title><link>http://chensy0203.github.com/posts/update-pure-site-03.html</link><description>&lt;p&gt;Pure发布新版本0.3.0也有一小段时间了，但最近一直在忙，没时间更新。现在趁着中秋放假，对中文网站做了一次同步更新，^_^!&lt;/p&gt;
+&lt;p&gt;先来看下pure0.3.0有哪些改变吧！&lt;/p&gt;
+&lt;p&gt;最大的改变，莫过于网格（grids）模块了！修复了上个版本两个比较严重的bug。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;旧的IE浏览器上，网格单元格有时会被挤到新一行，具体可看&lt;a href="https://github.com/yui/pure/issues/154/" target="_blank"&gt;issues154&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果开发者使用了定制的字体，网格单元格也会被挤到新一行，具体可看&lt;a href="https://github.com/yui/pure/issues/41/" target="_blank"&gt;issues14&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;网格现在使用了CSS3的Flexbox，避免了对letter-spacing设置负数后可能产生的副作用。同时网格也使用了特定的字体栈去保证不同浏览器之间的兼容性。默认的网格都设置了  font-family:sans-serif;&lt;/p&gt;
+&lt;p&gt;如果你需要使用非默认的字体，pure推荐你这样子用&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pure&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="s"&gt;"pure-u"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pure&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="s"&gt;"pure-u"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="cm"&gt;/* Set you're content font stack here, for example: */&lt;/span&gt;
+    &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Georgia&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Times&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"Times New Roman"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;serif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其他改变：
+* 上个版本使用pure时，是需要自己先手工引入Normalize.css；而当前版本已经把Normalize.css打包到基本模块里面，不需要再手工引入。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;删除forms-core.css模块，因为这个模块是Normalize.css的一些form样式的复制，而当前版本已经包含了Normalize.css，所以不需要了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给input添加readonly属性，设置了readonly属性的input是可以被focus的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给.pure-g-r下的图片添加height:auto规则，使得当调整页面大小的时候，它们的长宽比例能保持。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好了，点击 &lt;a href="http://pure-site.ap01.aws.af.cm/"&gt;http://pure-site.ap01.aws.af.cm/&lt;/a&gt; 访问吧&lt;/p&gt;</description><category>翻译</category><category>css</category><guid>http://chensy0203.github.com/posts/update-pure-site-03.html</guid><pubDate>Sat, 21 Sep 2013 11:12:14 GMT</pubDate></item><item><title>CSS HACK</title><link>http://chensy0203.github.com/posts/css-hack.html</link><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;越来越多的浏览器出现，曾经的CSS HACK现在还能HACK吗？
 不知道，所以我收集了网上一些常用的HACK，自己做了一下测试，记录下来，以方便查看。&lt;/p&gt;
 &lt;p&gt;HACK主要分为CSS选择器HACK、CSS属性HACK、IE条件注释HACK和JS判断HACK；各有优缺点，不必纠结于某一方式，具体问题具体分析。这里主要记录的是CSS选择器和属性HACK。&lt;/p&gt;
@@ -21,7 +56,7 @@
 &lt;div class="more"&gt;&lt;a href="/posts/hello-node-webkit.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>node-webkit</category><guid>http://chensy0203.github.com/posts/hello-node-webkit.html</guid><pubDate>Sat, 20 Jul 2013 22:04:39 GMT</pubDate></item><item><title>前端导航页面面世了</title><link>http://chensy0203.github.com/posts/about-web-site-nav.html</link><description>&lt;div&gt;&lt;p&gt;折腾了一天，终于把 &lt;a class="reference external" href="/stories/web-site-nav.html"&gt;前端导航&lt;/a&gt; 的页面做好了^_^。&lt;/p&gt;
 &lt;p&gt;是win8 metro 风格 ，看起来还行，就是随机配色有时不太好，随机算法太初级了，迟点再优化。&lt;/p&gt;
 &lt;p&gt;然后，只是简单整理了一些内容上去，以后会继续丰富的。&lt;/p&gt;
-&lt;div class="more"&gt;&lt;a href="/posts/about-web-site-nav.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>前端</category><guid>http://chensy0203.github.com/posts/about-web-site-nav.html</guid><pubDate>Fri, 12 Jul 2013 21:34:08 GMT</pubDate></item><item><title>pure中文网站终于安家落户了</title><link>http://chensy0203.github.com/posts/pure-css-zh.html</link><description>&lt;div&gt;&lt;p&gt;断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。&lt;/p&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/about-web-site-nav.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>博客建设</category><guid>http://chensy0203.github.com/posts/about-web-site-nav.html</guid><pubDate>Fri, 12 Jul 2013 21:34:08 GMT</pubDate></item><item><title>pure中文网站终于安家落户了</title><link>http://chensy0203.github.com/posts/pure-css-zh.html</link><description>&lt;div&gt;&lt;p&gt;断断续续折腾了两天，pure的中文网站终于在appFog安家落户了。&lt;/p&gt;
 &lt;p&gt;近期，我很想翻译一些东西，学习下新知识，复习下英语，顺便丰富下博客内容。我刚好在近期的一个小项目试用了下pure，感觉不错，小巧简洁，上手快，不过目前还没有中文文档，刚好我可以翻译下^_^。&lt;/p&gt;
 &lt;p&gt;想到，就开始做。&lt;/p&gt;
 &lt;p&gt;昨天在github上把 &lt;a class="reference external" href="https://github.com/yui/pure-site"&gt;pure-site&lt;/a&gt; clone了一份到本地，尝试翻译了一小部分，感觉挺顺利的。&lt;/p&gt;
@@ -37,7 +72,7 @@
 &lt;p&gt;13年初，又兴起了写博客的欲望，发现现在流行静态博客，于是我用Octopress搭了一个……&lt;/p&gt;
 &lt;p&gt;最近，我又从Octopress转到了Nikola……&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="more"&gt;&lt;a href="/posts/about-blog.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>blog</category><guid>http://chensy0203.github.com/posts/about-blog.html</guid><pubDate>Sun, 07 Jul 2013 14:43:01 GMT</pubDate></item><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/about-blog.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>博客建设</category><guid>http://chensy0203.github.com/posts/about-blog.html</guid><pubDate>Sun, 07 Jul 2013 14:43:01 GMT</pubDate></item><item><title>hello-markdown</title><link>http://chensy0203.github.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#overview"&gt;概述&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#philosophy"&gt;宗旨&lt;/a&gt;&lt;/li&gt;
@@ -70,7 +105,7 @@
 &lt;li&gt;&lt;a href="/posts/hello-markdown.html#editor"&gt;Markdown 免费编辑器&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;div class="more"&gt;&lt;a href="/posts/hello-markdown.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>markdown</category><category>hello</category><guid>http://chensy0203.github.com/posts/hello-markdown.html</guid><pubDate>Fri, 28 Jun 2013 11:27:46 GMT</pubDate></item><item><title>hello-rst</title><link>http://chensy0203.github.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/hello-markdown.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>博客建设</category><category>hello</category><guid>http://chensy0203.github.com/posts/hello-markdown.html</guid><pubDate>Fri, 28 Jun 2013 11:27:46 GMT</pubDate></item><item><title>hello-rst</title><link>http://chensy0203.github.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
 &lt;h2&gt;rst语法简介&lt;/h2&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h3&gt;空行分段&lt;/h3&gt;
@@ -85,7 +120,7 @@
 &lt;div class="section" id="id3"&gt;
 &lt;h3&gt;不留白续行&lt;/h3&gt;
 &lt;p&gt;行尾转义字符让续行之间不留白。&lt;/p&gt;
-&lt;div class="more"&gt;&lt;a href="/posts/hello-rst.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>rst</category><guid>http://chensy0203.github.com/posts/hello-rst.html</guid><pubDate>Tue, 25 Jun 2013 23:35:32 GMT</pubDate></item><item><title>Hello World</title><link>http://chensy0203.github.com/posts/hello-world.html</link><description>&lt;p&gt;Hello World , chensy!&lt;/p&gt;</description><category>hello</category><guid>http://chensy0203.github.com/posts/hello-world.html</guid><pubDate>Sat, 22 Jun 2013 16:06:37 GMT</pubDate></item><item><title>用octopress写博客</title><link>http://chensy0203.github.com/posts/hello-octopress.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面&lt;/h3&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/hello-rst.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>博客建设</category><guid>http://chensy0203.github.com/posts/hello-rst.html</guid><pubDate>Tue, 25 Jun 2013 23:35:32 GMT</pubDate></item><item><title>Hello World</title><link>http://chensy0203.github.com/posts/hello-world.html</link><description>&lt;p&gt;Hello World , chensy!&lt;/p&gt;</description><category>hello</category><guid>http://chensy0203.github.com/posts/hello-world.html</guid><pubDate>Sat, 22 Jun 2013 16:06:37 GMT</pubDate></item><item><title>用octopress写博客</title><link>http://chensy0203.github.com/posts/hello-octopress.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面&lt;/h3&gt;
 &lt;p&gt;一直想用blog记录点什么东西，但用网上的blog服务，感觉不是很灵活。自己也用过wordpress，但它是基于数据库的，总感觉有所欠缺。直到遇见了cotopress，才发现这应该是我想要的了。它是用文件存储数据，以静态方式发布，可以直接挂在github等地方，而且是免费的。&lt;/p&gt;
 &lt;p&gt;这是第一篇博客，结合网上的教程与自己的搭建过程，做了下记录。以后如果遇到新的问题，也会不断在这里更新的。 ^_^&lt;/p&gt;
-&lt;div class="more"&gt;&lt;a href="/posts/hello-octopress.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>octopress</category><category>hello</category><guid>http://chensy0203.github.com/posts/hello-octopress.html</guid><pubDate>Sun, 24 Feb 2013 15:45:00 GMT</pubDate></item></channel></rss>
+&lt;div class="more"&gt;&lt;a href="/posts/hello-octopress.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>博客建设</category><category>hello</category><guid>http://chensy0203.github.com/posts/hello-octopress.html</guid><pubDate>Sun, 24 Feb 2013 15:45:00 GMT</pubDate></item></channel></rss>

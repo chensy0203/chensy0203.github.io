@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>chensy's blog (blog)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sat, 20 Jul 2013 22:48:55 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>关于博客</title><link>http://chensy0203.github.com/posts/about-blog.html</link><description>&lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;有一段时间，流行Qzone，那时我也反拼命地装扮自己的空间，互踩，浇花……&lt;/p&gt;
-&lt;p&gt;后来流行写一些散文诗，写写小说，我把我的blog移到了163……&lt;/p&gt;
-&lt;p&gt;后来开始学习编程，把博客放到了JavaEye，写一些笔记，转载一些文章……&lt;/p&gt;
-&lt;p&gt;当有能力用Java写一个博客时，却苦于没有免费的空间……&lt;/p&gt;
-&lt;p&gt;后来买了个域名，用wordpress搭了一个博客，一年后废了……&lt;/p&gt;
-&lt;p&gt;13年初，又兴起了写博客的欲望，发现现在流行静态博客，于是我用Octopress搭了一个……&lt;/p&gt;
-&lt;p&gt;最近，我又从Octopress转到了Nikola……&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="more"&gt;&lt;a href="/posts/about-blog.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>blog</category><guid>http://chensy0203.github.com/posts/about-blog.html</guid><pubDate>Sun, 07 Jul 2013 14:43:01 GMT</pubDate></item></channel></rss>
+<rss version="2.0"><channel><title>chensy's blog (blog)</title><link>http://chensy0203.github.com</link><description>chensy's blog</description><lastBuildDate>Sun, 22 Sep 2013 20:35:48 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用octopress写博客</title><link>http://chensy0203.github.com/posts/hello-octopress.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面&lt;/h3&gt;
+&lt;p&gt;一直想用blog记录点什么东西，但用网上的blog服务，感觉不是很灵活。自己也用过wordpress，但它是基于数据库的，总感觉有所欠缺。直到遇见了cotopress，才发现这应该是我想要的了。它是用文件存储数据，以静态方式发布，可以直接挂在github等地方，而且是免费的。&lt;/p&gt;
+&lt;p&gt;这是第一篇博客，结合网上的教程与自己的搭建过程，做了下记录。以后如果遇到新的问题，也会不断在这里更新的。 ^_^&lt;/p&gt;
+&lt;div class="more"&gt;&lt;a href="/posts/hello-octopress.html"&gt;阅读全文 »&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</description><category>blog</category><category>hello</category><guid>http://chensy0203.github.com/posts/hello-octopress.html</guid><pubDate>Sun, 24 Feb 2013 15:45:00 GMT</pubDate></item></channel></rss>
